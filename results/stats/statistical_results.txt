@@ -1,4 +1,0 @@
-Hotspot mean: 0.95
-Non-hotspot mean: 0.78
-p-value: 0.034
-Test: Mann-Whitney U
