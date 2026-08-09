@@ -1,0 +1,537 @@
+IQ-TREE 2.2.6 COVID-edition built Dec  8 2023
+
+Input file name: results/phylogeny/TP53_curated_v0_mafft_for_iqtree.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 383656
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 56 sequences with 464 amino-acid sites
+Number of constant sites: 169 (= 36.4224% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 169 (= 36.4224% of all sites)
+Number of parsimony informative sites: 221
+Number of distinct site patterns: 361
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: Q.bird+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+Q.bird+I+G4       -9373.825   18969.649 -  0.00465   19040.286 -   0.0422   19429.177 +    0.668
+Q.bird+I+R3       -9365.472   18958.943 +    0.983   19034.072 +    0.943   19430.890 +    0.284
+Q.mammal+I+G4     -9376.544   18975.088 - 0.000307   19045.724 -  0.00278   19434.615 -   0.0441
+Q.mammal+I+R3     -9369.867   18967.734 -   0.0121   19042.863 -   0.0116   19439.681 -   0.0035
+Q.bird+G4         -9385.798   18991.595 - 7.98e-08   19060.774 -  1.5e-06   19446.982 - 9.09e-05
+Q.mammal+G4       -9386.078   18992.157 - 6.03e-08   19061.335 - 1.13e-06   19447.544 - 6.86e-05
+Q.bird+F+I+R3     -9355.697   18977.395 - 9.68e-05   19085.407 - 6.72e-12   19527.999 - 2.32e-22
+Q.bird+F+I+G4     -9365.546   18991.091 - 1.03e-07   19093.373 - 1.25e-13   19529.276 - 1.23e-22
+Q.mammal+F+I+G4   -9368.341   18996.682 - 6.27e-09   19098.965 - 7.65e-15   19534.867 - 7.49e-24
+Q.mammal+F+I+R3   -9360.015   18986.030 - 1.29e-06   19094.042 - 8.96e-14   19536.634 -  3.1e-24
+Q.mammal+F+G4     -9376.689   19011.378 - 4.04e-12   19111.798 - 1.25e-17   19545.424 - 3.82e-26
+Q.bird+F+G4       -9376.839   19011.678 - 3.48e-12   19112.097 - 1.08e-17   19545.723 - 3.29e-26
+JTT+I+G4          -9484.160   19190.321 - 5.62e-51   19260.957 -  5.1e-50   19649.848 - 8.07e-49
+JTT+G4            -9488.717   19197.435 -  1.6e-52   19266.613 - 3.01e-51   19652.822 - 1.82e-49
+JTT+I+R3          -9477.015   19182.029 - 3.55e-49   19257.158 -  3.4e-49   19653.976 - 1.02e-49
+JTTDCMut+I+G4     -9490.152   19202.303 -  1.4e-53   19272.940 - 1.27e-52   19661.830 - 2.02e-51
+JTTDCMut+G4       -9494.635   19209.271 - 4.31e-55   19278.449 - 8.11e-54   19664.658 - 4.91e-52
+JTTDCMut+I+R3     -9482.850   19193.700 - 1.04e-51   19268.829 - 9.95e-52   19665.647 - 2.99e-52
+Q.plant+F+I+G4    -9436.494   19132.987 - 1.58e-38   19235.270 - 1.93e-44   19671.172 - 1.89e-53
+Q.plant+F+I+R3    -9429.687   19125.374 - 7.12e-37   19233.386 - 4.94e-44   19675.979 - 1.71e-54
+Q.plant+F+G4      -9446.050   19150.100 - 3.04e-42   19250.519 - 9.42e-48   19684.145 - 2.88e-56
+HIVb+F+I+G4       -9451.633   19163.266 - 4.21e-45   19265.548 - 5.13e-51   19701.450 - 5.03e-60
+JTT+F+I+G4        -9452.426   19164.853 -  1.9e-45   19267.135 - 2.32e-51   19703.038 - 2.27e-60
+JTT+F+G4          -9457.276   19172.552 - 4.05e-47   19272.971 - 1.25e-52   19706.597 - 3.84e-61
+JTT+F+I+R3        -9445.014   19156.028 - 1.57e-43   19264.040 - 1.09e-50   19706.632 - 3.77e-61
+HIVb+F+I+R3       -9447.664   19161.327 - 1.11e-44   19269.339 - 7.71e-52   19711.932 - 2.66e-62
+JTTDCMut+F+I+G4   -9457.233   19174.465 - 1.56e-47   19276.748 -  1.9e-53   19712.650 - 1.86e-62
+HIVb+F+G4         -9460.823   19179.645 - 1.17e-48   19280.064 - 3.62e-54   19713.690 - 1.11e-62
+JTTDCMut+F+I+R3   -9449.573   19165.146 - 1.64e-45   19273.158 - 1.14e-52   19715.750 - 3.95e-63
+JTTDCMut+F+G4     -9461.985   19181.970 - 3.65e-49   19282.389 - 1.13e-54   19716.015 - 3.46e-63
+Q.plant+I+G4      -9517.248   19256.496 -  2.4e-65   19327.133 - 2.17e-64   19716.024 - 3.44e-63
+Q.plant+I+R3      -9513.582   19255.163 - 4.67e-65   19330.292 - 4.48e-65   19727.110 - 1.35e-65
+Q.plant+G4        -9527.000   19274.000 - 3.79e-69   19343.178 - 7.13e-68   19729.387 - 4.32e-66
+mtVer+F+I+G4      -9467.873   19195.746 - 3.73e-52   19298.028 - 4.54e-58   19733.931 - 4.45e-67
+mtVer+F+I+R3      -9461.773   19189.546 - 8.27e-51   19297.558 - 5.75e-58   19740.150 - 1.99e-68
+mtVer+F+G4        -9480.307   19218.615 - 4.03e-57   19319.034 - 1.25e-62   19752.660 - 3.82e-71
+HIVb+I+G4         -9547.137   19316.274 - 2.51e-78   19386.910 - 2.27e-77   19775.801 -  3.6e-76
+HIVb+I+R3         -9542.382   19312.763 - 1.45e-77   19387.892 - 1.39e-77   19784.710 - 4.19e-78
+HIVb+G4           -9557.036   19334.073 - 3.42e-82   19403.251 - 6.43e-81   19789.460 -  3.9e-79
+mtMet+F+I+G4      -9497.570   19255.140 - 4.72e-65   19357.423 - 5.75e-71   19793.325 - 5.64e-80
+FLAVI+F+I+G4      -9500.363   19260.725 - 2.89e-66   19363.008 - 3.53e-72   19798.910 - 3.45e-81
+FLAVI+F+I+R3      -9491.357   19248.713 - 1.17e-63   19356.725 - 8.15e-71   19799.318 - 2.82e-81
+mtMet+F+I+R3      -9492.582   19251.163 - 3.45e-64   19359.175 -  2.4e-71   19801.768 - 8.28e-82
+mtMet+F+G4        -9508.284   19274.567 - 2.85e-69   19374.986 - 8.83e-75   19808.612 -  2.7e-83
+FLAVI+F+G4        -9510.238   19278.477 - 4.04e-70   19378.896 - 1.25e-75   19812.522 - 3.83e-84
+FLAVI+I+R3        -9614.719   19457.438 - 5.57e-109   19532.567 - 5.35e-109   19929.384 - 1.61e-109
+FLAVI+I+G4        -9625.410   19472.819 - 2.54e-112   19543.456 - 2.31e-111   19932.347 - 3.66e-110
+FLU+F+I+R3        -9558.508   19383.015 - 8.06e-93   19491.027 - 5.6e-100   19933.620 - 1.93e-110
+FLU+F+I+G4        -9569.994   19399.989 - 1.66e-96   19502.271 - 2.03e-102   19938.174 - 1.99e-111
+FLAVI+G4          -9638.347   19496.695 - 1.66e-117   19565.873 - 3.13e-116   19952.082 - 1.89e-114
+FLU+F+G4          -9581.593   19421.186 - 4.15e-101   19521.605 - 1.28e-106   19955.231 - 3.93e-115
+mtInv+F+I+G4      -9611.479   19482.958 - 1.6e-114   19585.241 - 1.95e-120   20021.143 - 1.91e-129
+FLU+I+R3          -9664.205   19556.411 - 1.79e-130   19631.540 - 1.72e-130   20028.358 - 5.18e-131
+Q.insect+F+I+G4   -9615.913   19491.827 - 1.9e-116   19594.109 - 2.31e-122   20030.012 - 2.27e-131
+mtInv+F+I+R3      -9606.977   19479.954 - 7.18e-114   19587.966 - 4.99e-121   20030.559 - 1.72e-131
+mtInv+F+G4        -9620.384   19498.767 - 5.9e-118   19599.186 - 1.83e-123   20032.812 - 5.59e-132
+Q.insect+F+I+R3   -9609.234   19484.468 - 7.52e-115   19592.480 - 5.22e-122   20035.072 - 1.81e-132
+FLU+I+G4          -9676.952   19575.905 - 1.05e-134   19646.541 - 9.52e-134   20035.432 - 1.51e-132
+Q.insect+F+G4     -9624.281   19506.561 - 1.2e-119   19606.980 - 3.71e-125   20040.606 - 1.13e-133
+mtMAM+F+I+G4      -9624.703   19509.406 - 2.89e-120   19611.688 - 3.52e-126   20047.591 - 3.45e-135
+FLU+G4            -9690.042   19600.084 - 5.9e-140   19669.262 - 1.11e-138   20055.471 - 6.71e-137
+mtMAM+F+G4        -9634.084   19526.168 - 6.62e-124   19626.587 - 2.05e-129   20060.213 - 6.27e-138
+mtMAM+F+I+R3      -9624.707   19515.414 - 1.43e-121   19623.426 - 9.96e-129   20066.018 - 3.44e-139
+mtREV+F+I+G4      -9641.849   19543.697 - 1.03e-127   19645.980 - 1.26e-133   20081.882 - 1.24e-142
+mtREV+F+G4        -9648.662   19555.323 - 3.09e-130   19655.742 - 9.57e-136   20089.368 - 2.93e-144
+mtREV+F+I+R3      -9641.843   19549.686 - 5.18e-129   19657.698 - 3.6e-136   20100.291 - 1.24e-146
+HIVw+F+I+R3       -9648.502   19563.003 - 6.64e-132   19671.016 - 4.61e-139   20113.608 - 1.59e-149
+HIVw+F+I+G4       -9659.786   19579.571 - 1.68e-135   19681.854 - 2.05e-141   20117.756 -   2e-150
+HIVw+F+G4         -9666.978   19591.957 - 3.43e-138   19692.376 - 1.06e-143   20126.002 - 3.25e-152
+Q.insect+I+G4     -9722.443   19666.886 - 1.84e-154   19737.523 - 1.67e-153   20126.413 - 2.64e-152
+Dayhoff+I+G4      -9723.408   19668.816 - 7.01e-155   19739.452 - 6.36e-154   20128.343 - 1.01e-152
+DCMut+I+G4        -9724.024   19670.048 - 3.78e-155   19740.684 - 3.43e-154   20129.575 - 5.44e-153
+Dayhoff+G4        -9728.869   19677.738 - 8.09e-157   19746.917 - 1.52e-155   20133.126 - 9.21e-154
+DCMut+G4          -9729.473   19678.946 - 4.42e-157   19748.124 - 8.32e-156   20134.333 - 5.04e-154
+Dayhoff+I+R3      -9717.538   19663.076 - 1.24e-153   19738.205 - 1.19e-153   20135.023 - 3.57e-154
+Q.insect+I+R3     -9717.667   19663.333 - 1.09e-153   19738.462 - 1.04e-153   20135.280 - 3.14e-154
+DCMut+I+R3        -9718.157   19664.314 - 6.65e-154   19739.443 - 6.39e-154   20136.261 - 1.92e-154
+Q.insect+G4       -9730.437   19680.874 - 1.69e-157   19750.053 - 3.17e-156   20136.262 - 1.92e-154
+Dayhoff+F+I+G4    -9669.911   19599.821 - 6.72e-140   19702.103 - 8.19e-146   20138.006 - 8.03e-155
+DCMut+F+I+G4      -9670.266   19600.532 - 4.71e-140   19702.814 - 5.74e-146   20138.717 - 5.63e-155
+Dayhoff+F+I+R3    -9662.884   19591.767 - 3.77e-138   19699.780 - 2.62e-145   20142.372 - 9.05e-156
+DCMut+F+I+R3      -9663.251   19592.502 - 2.61e-138   19700.515 - 1.81e-145   20143.107 - 6.27e-156
+Dayhoff+F+G4      -9676.020   19610.041 - 4.06e-142   19710.460 - 1.26e-147   20144.086 - 3.84e-156
+VT+G4             -9734.493   19688.986 - 2.92e-159   19758.165 - 5.49e-158   20144.374 - 3.33e-156
+DCMut+F+G4        -9676.346   19610.691 - 2.93e-142   19711.111 - 9.07e-148   20144.737 - 2.77e-156
+VT+I+G4           -9731.672   19685.344 - 1.8e-158   19755.981 - 1.64e-157   20144.872 - 2.59e-156
+WAG+F+G4          -9676.674   19611.348 - 2.11e-142   19711.767 - 6.53e-148   20145.393 -   2e-156
+WAG+F+I+G4        -9673.765   19607.530 - 1.42e-141   19709.813 - 1.74e-147   20145.715 - 1.7e-156
+WAG+F+I+R3        -9666.715   19599.429 - 8.18e-140   19707.441 - 5.68e-147   20150.034 - 1.96e-157
+WAG+I+G4          -9734.964   19691.927 - 6.71e-160   19762.564 - 6.09e-159   20151.455 - 9.65e-158
+WAG+G4            -9738.098   19696.195 - 7.95e-161   19765.374 - 1.49e-159   20151.582 - 9.05e-158
+VT+I+R3           -9727.934   19683.868 - 3.78e-158   19758.997 - 3.62e-158   20155.815 - 1.09e-158
+VT+F+G4           -9684.556   19627.111 - 7.97e-146   19727.531 - 2.47e-151   20161.157 - 7.54e-160
+VT+F+I+G4         -9681.848   19623.696 - 4.4e-145   19725.979 - 5.36e-151   20161.881 - 5.25e-160
+WAG+I+R3          -9731.577   19691.154 - 9.88e-160   19766.283 - 9.49e-160   20163.101 - 2.85e-160
+VT+F+I+R3         -9675.997   19617.995 - 7.61e-144   19726.007 - 5.28e-151   20168.600 - 1.83e-161
+cpREV+F+I+G4      -9689.138   19638.275 -   3e-148   19740.558 - 3.66e-154   20176.460 - 3.59e-163
+cpREV+F+G4        -9692.367   19642.734 - 3.23e-149   19743.153 - 9.99e-155   20176.779 - 3.06e-163
+Q.yeast+F+I+G4    -9692.097   19644.193 - 1.56e-149   19746.475 - 1.9e-155   20182.378 - 1.86e-164
+cpREV+F+I+R3      -9683.580   19633.160 - 3.87e-147   19741.172 - 2.69e-154   20183.765 - 9.3e-165
+Q.yeast+F+I+R3    -9684.573   19635.145 - 1.44e-147   19743.157 - 9.97e-155   20185.750 - 3.45e-165
+Q.yeast+F+G4      -9702.404   19662.809 - 1.41e-153   19763.228 - 4.37e-159   20196.854 - 1.34e-167
+Q.pfam+F+I+G4     -9702.288   19664.576 - 5.84e-154   19766.858 - 7.11e-160   20202.761 - 6.97e-169
+Q.pfam+F+I+R3     -9696.393   19658.787 - 1.06e-152   19766.799 - 7.33e-160   20209.392 - 2.53e-170
+Q.pfam+F+G4       -9709.751   19677.501 - 9.11e-157   19777.921 - 2.82e-162   20211.547 - 8.62e-171
+mtVer+I+G4        -9765.620   19753.241 - 3.26e-173   19823.877 - 2.96e-172   20212.768 - 4.68e-171
+mtVer+I+R3        -9761.362   19750.724 - 1.15e-172   19825.853 - 1.1e-172   20222.671 - 3.31e-173
+mtVer+G4          -9777.278   19774.556 - 7.66e-178   19843.735 - 1.44e-176   20229.944 - 8.72e-175
+cpREV+I+G4        -9778.377   19778.754 - 9.39e-179   19849.390 - 8.52e-178   20238.281 - 1.35e-176
+cpREV+G4          -9782.020   19784.039 - 6.69e-180   19853.218 - 1.26e-178   20239.426 - 7.61e-177
+cpREV+I+R3        -9772.492   19772.983 - 1.68e-177   19848.112 - 1.61e-177   20244.930 - 4.86e-178
+Q.pfam+I+G4       -9797.066   19816.132 - 7.18e-187   19886.769 - 6.52e-186   20275.659 - 1.03e-184
+LG+F+I+G4         -9739.787   19739.573 - 3.03e-170   19841.856 - 3.69e-176   20277.758 - 3.61e-185
+LG+F+I+R3         -9733.098   19732.196 - 1.21e-168   19840.208 - 8.4e-176   20282.801 - 2.9e-186
+Q.pfam+G4         -9804.347   19828.695 - 1.34e-189   19897.873 - 2.53e-188   20284.082 - 1.53e-186
+HIVw+I+R3         -9792.541   19813.082 - 3.3e-186   19888.211 - 3.17e-186   20285.029 - 9.53e-187
+Q.pfam+I+R3       -9793.001   19814.002 - 2.08e-186   19889.131 -   2e-186   20285.948 - 6.02e-187
+LG+F+G4           -9747.784   19753.567 - 2.77e-173   19853.986 - 8.56e-179   20287.612 - 2.62e-187
+HIVw+I+G4         -9808.724   19839.447 - 6.22e-192   19910.083 - 5.64e-191   20298.974 - 8.93e-190
+HIVw+G4           -9817.432   19854.864 - 2.79e-195   19924.042 - 5.25e-194   20310.251 - 3.18e-192
+Q.yeast+I+G4      -9822.636   19867.272 - 5.64e-198   19937.909 - 5.12e-197   20326.799 - 8.1e-196
+Q.yeast+I+R3      -9816.255   19860.510 - 1.66e-196   19935.639 - 1.59e-196   20332.457 - 4.79e-197
+Q.yeast+G4        -9833.303   19886.606 - 3.57e-202   19955.784 - 6.72e-201   20341.993 - 4.07e-199
+LG+I+G4           -9832.044   19886.088 - 4.63e-202   19956.724 - 4.2e-201   20345.615 - 6.65e-200
+LG+G4             -9838.928   19897.856 - 1.29e-204   19967.034 - 2.42e-203   20353.243 - 1.47e-201
+LG+I+R3           -9827.138   19882.275 - 3.12e-201   19957.404 - 2.99e-201   20354.222 -   9e-202
+LG+I+R4           -9822.134   19876.268 - 6.28e-200   19954.493 - 1.28e-200   20356.495 - 2.89e-202
+LG+R4             -9825.432   19880.864 - 6.31e-201   19957.531 - 2.81e-201   20356.951 - 2.3e-202
+LG+R3             -9833.067   19892.134 - 2.25e-203   19965.745 - 4.62e-203   20359.941 - 5.15e-203
+LG+R5             -9825.164   19884.328 - 1.12e-201   19964.131 - 1.03e-202   20368.694 - 6.48e-205
+LG+I+R2           -9854.800   19933.599 - 2.23e-212   20005.713 - 9.67e-212   20397.266 - 4.05e-211
+mtMet+I+G4        -9869.820   19961.640 - 1.82e-218   20032.276 - 1.65e-217   20421.167 - 2.61e-216
+mtMet+I+R3        -9868.236   19964.471 - 4.41e-219   20039.600 - 4.24e-219   20436.418 - 1.27e-219
+mtMet+G4          -9881.515   19983.029 - 4.12e-223   20052.208 - 7.75e-222   20438.416 - 4.69e-220
+mtZOA+F+I+G4      -9820.529   19901.058 - 2.6e-205   20003.340 - 3.17e-211   20439.243 - 3.1e-220
+mtZOA+F+I+R3      -9815.563   19897.126 - 1.86e-204   20005.138 - 1.29e-211   20447.731 - 4.45e-222
+mtZOA+F+G4        -9829.580   19917.160 - 8.29e-209   20017.579 - 2.56e-214   20451.205 - 7.84e-223
+LG+R2             -9893.509   20009.017 - 9.37e-229   20079.654 - 8.5e-228   20468.544 - 1.35e-226
+rtREV+F+I+G4      -9848.969   19957.939 - 1.16e-217   20060.221 - 1.41e-223   20496.124 - 1.38e-232
+rtREV+F+I+R3      -9843.462   19952.924 - 1.42e-216   20060.936 - 9.86e-224   20503.529 - 3.41e-234
+rtREV+F+G4        -9855.942   19969.885 - 2.95e-220   20070.304 - 9.11e-226   20503.930 - 2.79e-234
+rtREV+I+G4        -9921.914   20065.828 - 4.32e-241   20136.464 - 3.92e-240   20525.355 - 6.21e-239
+rtREV+G4          -9928.300   20076.601 - 1.98e-243   20145.779 - 3.72e-242   20531.988 - 2.25e-240
+rtREV+I+R3        -9917.849   20063.697 - 1.25e-240   20138.826 - 1.2e-240   20535.644 - 3.62e-241
+PMB+F+G4          -9890.872   20039.744 - 1.99e-235   20140.163 - 6.17e-241   20573.789 - 1.89e-249
+PMB+F+I+G4        -9888.216   20036.431 - 1.04e-234   20138.713 - 1.27e-240   20574.616 - 1.25e-249
+PMB+F+I+R3        -9885.337   20036.674 - 9.25e-235   20144.686 - 6.42e-242   20587.279 - 2.22e-252
+mtREV+I+G4        -9962.343   20146.686 - 1.2e-258   20217.322 - 1.08e-257   20606.213 - 1.72e-256
+PMB+G4            -9967.846   20155.691 - 1.32e-260   20224.870 - 2.49e-259   20611.079 - 1.51e-257
+mtREV+G4          -9968.337   20156.673 - 8.1e-261   20225.852 - 1.52e-259   20612.061 - 9.23e-258
+PMB+I+G4          -9965.353   20152.705 - 5.89e-260   20223.342 - 5.35e-259   20612.233 - 8.47e-258
+PMB+I+R3          -9963.211   20154.421 - 2.5e-260   20229.550 - 2.4e-260   20626.368 - 7.22e-261
+mtREV+I+R3        -9963.569   20155.137 - 1.75e-260   20230.266 - 1.68e-260   20627.084 - 5.04e-261
+mtMAM+I+G4        -9973.302   20168.603 - 2.08e-263   20239.240 - 1.89e-262   20628.130 - 2.99e-261
+mtMAM+G4          -9980.095   20180.191 - 6.34e-266   20249.369 - 1.19e-264   20635.578 - 7.22e-263
+mtMAM+I+R3        -9980.210   20188.419 - 1.04e-267   20263.548 - 9.94e-268   20660.366 - 2.99e-268
+Blosum62+F+G4     -9938.034   20134.068 - 6.57e-256   20234.487 - 2.03e-261   20668.113 - 6.21e-270
+Blosum62+F+I+G4   -9935.091   20130.183 - 4.58e-255   20232.465 - 5.58e-261   20668.368 - 5.47e-270
+Blosum62+F+I+R3   -9928.708   20123.416 - 1.35e-253   20231.428 - 9.38e-261   20674.020 - 3.24e-271
+mtART+F+I+G4      -9965.067   20190.134 - 4.39e-268   20292.417 - 5.35e-274   20728.319 - 5.25e-283
+Blosum62+G4      -10032.332   20284.665 - 1.31e-288   20353.843 - 2.45e-287   20740.052 - 1.49e-285
+Blosum62+I+G4    -10029.329   20280.658 - 9.67e-288   20351.295 - 8.78e-287   20740.186 - 1.39e-285
+mtART+F+I+R3      -9963.574   20193.149 - 9.73e-269   20301.161 - 6.76e-276   20743.753 - 2.34e-286
+mtART+F+G4        -9977.196   20212.391 - 6.45e-273   20312.810 -   2e-278   20746.436 - 6.11e-287
+Blosum62+I+R3    -10026.407   20280.814 - 8.95e-288   20355.943 - 8.59e-288   20752.760 - 2.59e-288
+mtZOA+I+G4       -10075.200   20372.400 - 1.16e-307   20443.036 - 1.05e-306   20831.927 - 1.67e-305
+mtZOA+G4         -10081.036   20382.071 - 9.21e-310   20451.250 - 1.73e-308   20837.459 - 1.05e-306
+mtZOA+I+R3       -10075.132   20378.264 - 6.18e-309   20453.393 - 5.93e-309   20850.211 - 1.78e-309
+mtInv+I+G4       -10105.320   20432.641 - 9.62e-321   20503.277 - 8.73e-320   20892.168 - 1.38e-318
+mtInv+G4         -10117.129   20454.259 -        0   20523.437 - 4.94e-324   20909.646 - 2.22e-322
+mtInv+I+R3       -10105.000   20438.001 - 6.62e-322   20513.130 - 6.32e-322   20909.948 - 1.93e-322
+LG+I             -10134.732   20489.464 -        0   20558.642 -        0   20944.851 -        0
+mtART+I+G4       -10320.374   20862.748 -        0   20933.384 -        0   21322.275 -        0
+mtART+G4         -10332.832   20885.664 -        0   20954.842 -        0   21341.051 -        0
+mtART+I+R3       -10331.503   20891.007 -        0   20966.135 -        0   21362.953 -        0
+LG               -10501.596   21221.192 -        0   21288.932 -        0   21672.440 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: Q.bird+I+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.2133
+Gamma shape alpha: 1.0305
+
+ Category  Relative_rate  Proportion
+  0         0              0.2133
+  1         0.1818         0.1967
+  2         0.6175         0.1967
+  3         1.2774         0.1967
+  4         3.0081         0.1967
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -9358.6968 (s.e. 414.2156)
+Unconstrained log-likelihood (without tree): -2622.2503
+Number of free parameters (#branches + #model parameters): 111
+Akaike information criterion (AIC) score: 18939.3935
+Corrected Akaike information criterion (AICc) score: 19010.0299
+Bayesian information criterion (BIC) score: 19398.9207
+
+Total tree length (sum of branch lengths): 5.7340
+Sum of internal branch lengths: 2.3845 (41.5858% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0022) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NP_001394193|Homo_sapiens|Human|Primates' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++**NP_001394193|Homo_sapiens|Human|Primates
+|
+|  +**XP_001172077|Pan_troglodytes|Chimpanzee|Primates
++**| (0/55)
+|  +--XP_063556659|Gorilla_gorilla|Gorilla|Primates
+|
+|  +--XP_002827020|Pongo_abelii|Orangutan|Primates
++--| (93.2/99)
+   |     +--NP_001040616|Macaca_mulatta|Rhesus_macaque|Primates
+   |  +--| (98.1/100)
+   |  |  +--XP_003912321|Papio_anubis|Baboon|Primates
+   +--| (90.4/99)
+      |  +---XP_002747994|Callithrix_jacchus|Marmoset|Primates
+      +--| (95.6/100)
+         |  +-----XP_012631512|Microcebus_murinus|Mouse_lemur|Primates
+         +--| (91.2/100)
+            |                       +------NP_001120705|Mus_musculus|Mouse|Rodentia
+            |             +---------| (100/100)
+            |             |         +--NP_001416925|Rattus_norvegicus|Rat|Rodentia
+            |        +----| (100/100)
+            |        |    |  +---------NP_001230905|Cricetulus_griseus|Chinese_hamster|Rodentia
+            |        |    +--| (83.2/97)
+            |        |       +--XP_005349834|Microtus_ochrogaster|Prairie_vole|Rodentia
+            |     +--| (77.9/36)
+            |     |  |      +-------NP_001166211|Cavia_porcellus|Guinea_pig|Rodentia
+            |     |  |  +---| (99.7/100)
+            |     |  |  |   +--NP_001297199|Heterocephalus_glaber|Naked_mole-rat|Rodentia
+            |     |  +--| (67.5/37)
+            |     |     |  +--XP_040125303|Ictidomys_tridecemlineatus|Thirteen-lined_ground_squirrel|Rodentia
+            |     |     +--| (81.6/38)
+            |     |        +----------------------XP_012868945|Dipodomys_ordii|Kangaroo_rat|Rodentia
+            |  +--| (93.8/84)
+            |  |  |  +---NP_001075873|Oryctolagus_cuniculus|Rabbit|Lagomorpha
+            |  |  +--| (83.2/61)
+            |  |     +---------------XP_004594840|Ochotona_princeps|Pika|Lagomorpha
+            +--| (97.1/100)
+               |                       +--NP_001376147|Canis_lupus_familiaris|Dog|Carnivora
+               |                    +--| (100/100)
+               |                    |  +**XP_025861192|Vulpes_vulpes|Red_fox|Carnivora
+               |                 +--| (98.5/100)
+               |                 |  |        +--XP_057167334|Ursus_arctos|Brown_bear|Carnivora
+               |                 |  |     +--| (99.3/100)
+               |                 |  |     |  +--XP_019660679|Ailuropoda_melanoleuca|Giant_panda|Carnivora
+               |                 |  |  +--| (59.9/98)
+               |                 |  |  |  +--XP_027481717|Zalophus_californianus|California_sea_lion|Carnivora
+               |                 |  +--| (73.6/90)
+               |                 |     +--XP_004760313|Mustela_putorius_furo|Ferret|Carnivora
+               |              +--| (98.7/100)
+               |              |  |    +--NP_001009294|Felis_catus|Cat|Carnivora
+               |              |  +----| (100/100)
+               |              |       +**XP_042822088|Panthera_tigris|Tiger|Carnivora
+               |           +--| (70.1/68)
+               |           |  |     +--NP_001189334|Equus_caballus|Horse|Perissodactyla
+               |           |  |  +--| (99.6/100)
+               |           |  |  |  +--XP_014717043|Equus_asinus|Donkey|Perissodactyla
+               |           |  +--| (39.6/68)
+               |           |     +-----XP_014645038|Ceratotherium_simum|White_rhinoceros|Perissodactyla
+               |        +--| (75.2/52)
+               |        |  |             +--NP_776626|Bos_taurus|Cattle|Artiodactyla
+               |        |  |        +----| (100/100)
+               |        |  |        |    |  +--NP_001009403|Ovis_aries|Sheep|Artiodactyla
+               |        |  |        |    +--| (95.2/100)
+               |        |  |        |       +**XP_017920082|Capra_hircus|Goat|Artiodactyla
+               |        |  |     +--| (88.2/95)
+               |        |  |     |  +--XP_057572051|Hippopotamus_amphibius|Hippopotamus|Artiodactyla
+               |        |  |  +--| (86.4/96)
+               |        |  |  |  |  +--XP_036692565|Balaenoptera_musculus|Blue_whale|Cetacea
+               |        |  |  |  +--| (79.6/95)
+               |        |  |  |     |        +-----XP_073653870|Tursiops_truncatus|Bottlenose_dolphin|Cetacea
+               |        |  |  |     |     +--| (66.5/89)
+               |        |  |  |     |     |  +--XP_033278862|Orcinus_orca|Orca|Cetacea
+               |        |  |  |     |  +--| (96.2/96)
+               |        |  |  |     |  |  +--XP_022451328|Delphinapterus_leucas|Beluga_whale|Cetacea
+               |        |  |  |     +**| (0/56)
+               |        |  |  |        +--XP_028355209|Physeter_catodon|Sperm_whale|Cetacea
+               |        |  +--| (99/100)
+               |        |     |  +--NP_998989|Sus_scrofa|Pig|Artiodactyla
+               |        |     +--| (91/96)
+               |        |        |  +**XP_010994816|Camelus_dromedarius|Dromedary_camel|Artiodactyla
+               |        |        +--| (99.2/100)
+               |        |           +--XP_006218839|Vicugna_pacos|Alpaca|Artiodactyla
+               |     +--| (20.3/45)
+               |     |  |              +-------XP_006102640|Myotis_lucifugus|Little_brown_bat|Chiroptera
+               |     |  |      +-------| (99.9/100)
+               |     |  |      |       +----XP_008151723|Eptesicus_fuscus|Big_brown_bat|Chiroptera
+               |     |  |   +--| (49.8/94)
+               |     |  |   |  |    +--XP_011357167|Pteropus_vampyrus|Large_flying_fox|Chiroptera
+               |     |  |   |  +----| (99.8/100)
+               |     |  |   |       +--XP_036078506|Rousettus_aegyptiacus|Egyptian_fruit_bat|Chiroptera
+               |     |  +---| (99.1/99)
+               |     |      +---XP_032947086|Rhinolophus_ferrumequinum|Greater_horseshoe_bat|Chiroptera
+               |  +--| (88.5/94)
+               |  |  |   +---------------------XP_060060302|Erinaceus_europaeus|European_hedgehog|Eulipotyphla
+               |  |  +---| (93.5/92)
+               |  |      +------XP_054988705|Sorex_araneus|Common_shrew|Eulipotyphla
+               +--| (90.8/85)
+                  |             +**XP_003416950|Loxodonta_africana|African_elephant|Proboscidea
+                  |          +--| (84.3/99)
+                  |          |  +**XP_049714739|Elephas_maximus|Asian_elephant|Proboscidea
+                  |  +-------| (100/100)
+                  |  |       +--XP_023586869|Trichechus_manatus|Manatee|Sirenia
+                  +--| (20.2/64)
+                     |                                        +---------XP_056673571|Monodelphis_domestica|Opossum|Didelphimorphia
+                     |                                     +--| (95.2/99)
+                     |                                     |  +--XP_031821305|Sarcophilus_harrisii|Tasmanian_devil|Dasyuromorphia
+                     |                                  +--| (30.3/82)
+                     |                                  |  +--XP_072497274|Macropus_eugenii|Tammar_wallaby|Diprotodontia
+                     |  +-------------------------------| (100/100)
+                     |  |                               +--XP_020822127|Phascolarctos_cinereus|Koala|Diprotodontia
+                     +--| (88.4/97)
+                        +-------XP_023447566|Dasypus_novemcinctus|Nine-banded_armadillo|Cingulata
+
+Tree in newick format:
+
+(NP_001394193|Homo_sapiens|Human|Primates:0.0000010034,(XP_001172077|Pan_troglodytes|Chimpanzee|Primates:0.0000010034,XP_063556659|Gorilla_gorilla|Gorilla|Primates:0.0031661789)0/55:0.0000010034,(XP_002827020|Pongo_abelii|Orangutan|Primates:0.0148978789,((NP_001040616|Macaca_mulatta|Rhesus_macaque|Primates:0.0030350122,XP_003912321|Papio_anubis|Baboon|Primates:0.0028130581)98.1/100:0.0223723757,(XP_002747994|Callithrix_jacchus|Marmoset|Primates:0.0738191346,(XP_012631512|Microcebus_murinus|Mouse_lemur|Primates:0.1060943328,(((((NP_001120705|Mus_musculus|Mouse|Rodentia:0.1196762335,NP_001416925|Rattus_norvegicus|Rat|Rodentia:0.0312083417)100/100:0.1706742461,(NP_001230905|Cricetulus_griseus|Chinese_hamster|Rodentia:0.1676605188,XP_005349834|Microtus_ochrogaster|Prairie_vole|Rodentia:0.0531451536)83.2/97:0.0194988768)100/100:0.0791292521,((NP_001166211|Cavia_porcellus|Guinea_pig|Rodentia:0.1317266911,NP_001297199|Heterocephalus_glaber|Naked_mole-rat|Rodentia:0.0407478030)99.7/100:0.0723301065,(XP_040125303|Ictidomys_tridecemlineatus|Thirteen-lined_ground_squirrel|Rodentia:0.0593168960,XP_012868945|Dipodomys_ordii|Kangaroo_rat|Rodentia:0.3612820950)81.6/38:0.0198283148)67.5/37:0.0060211876)77.9/36:0.0093255515,(NP_001075873|Oryctolagus_cuniculus|Rabbit|Lagomorpha:0.0672980765,XP_004594840|Ochotona_princeps|Pika|Lagomorpha:0.2551422856)83.2/61:0.0160561395)93.8/84:0.0199395724,((((((((NP_001376147|Canis_lupus_familiaris|Dog|Carnivora:0.0032064154,XP_025861192|Vulpes_vulpes|Red_fox|Carnivora:0.0000021462)100/100:0.0550639718,(((XP_057167334|Ursus_arctos|Brown_bear|Carnivora:0.0031866623,XP_019660679|Ailuropoda_melanoleuca|Giant_panda|Carnivora:0.0031982772)99.3/100:0.0301232147,XP_027481717|Zalophus_californianus|California_sea_lion|Carnivora:0.0326032319)59.9/98:0.0036718119,XP_004760313|Mustela_putorius_furo|Ferret|Carnivora:0.0528837580)73.6/90:0.0148711854)98.5/100:0.0365397340,(NP_001009294|Felis_catus|Cat|Carnivora:0.0030368952,XP_042822088|Panthera_tigris|Tiger|Carnivora:0.0000010034)100/100:0.0823485463)98.7/100:0.0545975400,((NP_001189334|Equus_caballus|Horse|Perissodactyla:0.0052318446,XP_014717043|Equus_asinus|Donkey|Perissodactyla:0.0044724345)99.6/100:0.0586241576,XP_014645038|Ceratotherium_simum|White_rhinoceros|Perissodactyla:0.1021150362)39.6/68:0.0222873350)70.1/68:0.0076393187,((((NP_776626|Bos_taurus|Cattle|Artiodactyla:0.0571342202,(NP_001009403|Ovis_aries|Sheep|Artiodactyla:0.0064261599,XP_017920082|Capra_hircus|Goat|Artiodactyla:0.0000010034)95.2/100:0.0222272316)100/100:0.0855242606,XP_057572051|Hippopotamus_amphibius|Hippopotamus|Artiodactyla:0.0546067408)88.2/95:0.0132412837,(XP_036692565|Balaenoptera_musculus|Blue_whale|Cetacea:0.0128496063,(((XP_073653870|Tursiops_truncatus|Bottlenose_dolphin|Cetacea:0.1014494583,XP_033278862|Orcinus_orca|Orca|Cetacea:0.0036126467)66.5/89:0.0036876561,XP_022451328|Delphinapterus_leucas|Beluga_whale|Cetacea:0.0062998447)96.2/96:0.0146230864,XP_028355209|Physeter_catodon|Sperm_whale|Cetacea:0.0063019369)0/56:0.0000010034)79.6/95:0.0067081928)86.4/96:0.0136709913,(NP_998989|Sus_scrofa|Pig|Artiodactyla:0.0576374763,(XP_010994816|Camelus_dromedarius|Dromedary_camel|Artiodactyla:0.0000010034,XP_006218839|Vicugna_pacos|Alpaca|Artiodactyla:0.0099154934)99.2/100:0.0351444936)91/96:0.0185073557)99/100:0.0466545222)75.2/52:0.0055939291,(((XP_006102640|Myotis_lucifugus|Little_brown_bat|Chiroptera:0.1319411140,XP_008151723|Eptesicus_fuscus|Big_brown_bat|Chiroptera:0.0883177036)99.9/100:0.1386989321,(XP_011357167|Pteropus_vampyrus|Large_flying_fox|Chiroptera:0.0293022283,XP_036078506|Rousettus_aegyptiacus|Egyptian_fruit_bat|Chiroptera:0.0604869504)99.8/100:0.0889330026)49.8/94:0.0084945353,XP_032947086|Rhinolophus_ferrumequinum|Greater_horseshoe_bat|Chiroptera:0.0725766493)99.1/99:0.0676879748)20.3/45:0.0079321879,(XP_060060302|Erinaceus_europaeus|European_hedgehog|Eulipotyphla:0.3449371161,XP_054988705|Sorex_araneus|Common_shrew|Eulipotyphla:0.1098253151)93.5/92:0.0775951597)88.5/94:0.0229498623,(((XP_003416950|Loxodonta_africana|African_elephant|Proboscidea:0.0000010034,XP_049714739|Elephas_maximus|Asian_elephant|Proboscidea:0.0000010034)84.3/99:0.0172423792,XP_023586869|Trichechus_manatus|Manatee|Sirenia:0.0549104847)100/100:0.1355963228,((((XP_056673571|Monodelphis_domestica|Opossum|Didelphimorphia:0.1658319523,XP_031821305|Sarcophilus_harrisii|Tasmanian_devil|Dasyuromorphia:0.0334916103)95.2/99:0.0358215747,XP_072497274|Macropus_eugenii|Tammar_wallaby|Diprotodontia:0.0620420277)30.3/82:0.0158521376,XP_020822127|Phascolarctos_cinereus|Koala|Diprotodontia:0.0212705298)100/100:0.5071955672,XP_023447566|Dasypus_novemcinctus|Nine-banded_armadillo|Cingulata:0.1400748671)88.4/97:0.0529231344)20.2/64:0.0128434293)90.8/85:0.0195716685)97.1/100:0.0408338948)91.2/100:0.0290509040)95.6/100:0.0283007868)90.4/99:0.0148381276)93.2/99:0.0128730061);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -9361.369740
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--NP_001394193|Homo_sapiens|Human|Primates
+|
+|  +--XP_001172077|Pan_troglodytes|Chimpanzee|Primates
++--| (55)
+|  +--XP_063556659|Gorilla_gorilla|Gorilla|Primates
+|
+|  +--XP_002827020|Pongo_abelii|Orangutan|Primates
++--| (99)
+   |     +--NP_001040616|Macaca_mulatta|Rhesus_macaque|Primates
+   |  +--| (100)
+   |  |  +--XP_003912321|Papio_anubis|Baboon|Primates
+   +--| (99)
+      |  +---XP_002747994|Callithrix_jacchus|Marmoset|Primates
+      +--| (100)
+         |  +-----XP_012631512|Microcebus_murinus|Mouse_lemur|Primates
+         +--| (100)
+            |                       +------NP_001120705|Mus_musculus|Mouse|Rodentia
+            |             +---------| (100)
+            |             |         +--NP_001416925|Rattus_norvegicus|Rat|Rodentia
+            |        +----| (100)
+            |        |    |  +---------NP_001230905|Cricetulus_griseus|Chinese_hamster|Rodentia
+            |        |    +--| (97)
+            |        |       +--XP_005349834|Microtus_ochrogaster|Prairie_vole|Rodentia
+            |     +--| (36)
+            |     |  |         +-------NP_001166211|Cavia_porcellus|Guinea_pig|Rodentia
+            |     |  |     +---| (100)
+            |     |  |     |   +--NP_001297199|Heterocephalus_glaber|Naked_mole-rat|Rodentia
+            |     |  |  +--| (47)
+            |     |  |  |  +---XP_040125303|Ictidomys_tridecemlineatus|Thirteen-lined_ground_squirrel|Rodentia
+            |     |  +--| (37)
+            |     |     +-----------------------XP_012868945|Dipodomys_ordii|Kangaroo_rat|Rodentia
+            |  +--| (84)
+            |  |  |  +---NP_001075873|Oryctolagus_cuniculus|Rabbit|Lagomorpha
+            |  |  +--| (61)
+            |  |     +---------------XP_004594840|Ochotona_princeps|Pika|Lagomorpha
+            +--| (100)
+               |                       +--NP_001376147|Canis_lupus_familiaris|Dog|Carnivora
+               |                    +--| (100)
+               |                    |  +--XP_025861192|Vulpes_vulpes|Red_fox|Carnivora
+               |                 +--| (100)
+               |                 |  |        +--XP_057167334|Ursus_arctos|Brown_bear|Carnivora
+               |                 |  |     +--| (100)
+               |                 |  |     |  +--XP_019660679|Ailuropoda_melanoleuca|Giant_panda|Carnivora
+               |                 |  |  +--| (98)
+               |                 |  |  |  +--XP_027481717|Zalophus_californianus|California_sea_lion|Carnivora
+               |                 |  +--| (90)
+               |                 |     +--XP_004760313|Mustela_putorius_furo|Ferret|Carnivora
+               |              +--| (100)
+               |              |  |    +--NP_001009294|Felis_catus|Cat|Carnivora
+               |              |  +----| (100)
+               |              |       +--XP_042822088|Panthera_tigris|Tiger|Carnivora
+               |           +--| (68)
+               |           |  |     +--NP_001189334|Equus_caballus|Horse|Perissodactyla
+               |           |  |  +--| (100)
+               |           |  |  |  +--XP_014717043|Equus_asinus|Donkey|Perissodactyla
+               |           |  +--| (68)
+               |           |     +-----XP_014645038|Ceratotherium_simum|White_rhinoceros|Perissodactyla
+               |        +--| (52)
+               |        |  |             +--NP_776626|Bos_taurus|Cattle|Artiodactyla
+               |        |  |        +----| (100)
+               |        |  |        |    |  +--NP_001009403|Ovis_aries|Sheep|Artiodactyla
+               |        |  |        |    +--| (100)
+               |        |  |        |       +--XP_017920082|Capra_hircus|Goat|Artiodactyla
+               |        |  |     +--| (95)
+               |        |  |     |  +--XP_057572051|Hippopotamus_amphibius|Hippopotamus|Artiodactyla
+               |        |  |  +--| (96)
+               |        |  |  |  |  +--XP_036692565|Balaenoptera_musculus|Blue_whale|Cetacea
+               |        |  |  |  +--| (95)
+               |        |  |  |     |        +-----XP_073653870|Tursiops_truncatus|Bottlenose_dolphin|Cetacea
+               |        |  |  |     |     +--| (89)
+               |        |  |  |     |     |  +--XP_033278862|Orcinus_orca|Orca|Cetacea
+               |        |  |  |     |  +--| (96)
+               |        |  |  |     |  |  +--XP_022451328|Delphinapterus_leucas|Beluga_whale|Cetacea
+               |        |  |  |     +--| (56)
+               |        |  |  |        +--XP_028355209|Physeter_catodon|Sperm_whale|Cetacea
+               |        |  +--| (100)
+               |        |     |  +--NP_998989|Sus_scrofa|Pig|Artiodactyla
+               |        |     +--| (96)
+               |        |        |  +--XP_010994816|Camelus_dromedarius|Dromedary_camel|Artiodactyla
+               |        |        +--| (100)
+               |        |           +--XP_006218839|Vicugna_pacos|Alpaca|Artiodactyla
+               |     +--| (45)
+               |     |  |              +-------XP_006102640|Myotis_lucifugus|Little_brown_bat|Chiroptera
+               |     |  |      +-------| (100)
+               |     |  |      |       +----XP_008151723|Eptesicus_fuscus|Big_brown_bat|Chiroptera
+               |     |  |   +--| (94)
+               |     |  |   |  |    +--XP_011357167|Pteropus_vampyrus|Large_flying_fox|Chiroptera
+               |     |  |   |  +----| (100)
+               |     |  |   |       +--XP_036078506|Rousettus_aegyptiacus|Egyptian_fruit_bat|Chiroptera
+               |     |  +---| (99)
+               |     |      +---XP_032947086|Rhinolophus_ferrumequinum|Greater_horseshoe_bat|Chiroptera
+               |  +--| (94)
+               |  |  |   +---------------------XP_060060302|Erinaceus_europaeus|European_hedgehog|Eulipotyphla
+               |  |  +---| (92)
+               |  |      +------XP_054988705|Sorex_araneus|Common_shrew|Eulipotyphla
+               +--| (85)
+                  |             +--XP_003416950|Loxodonta_africana|African_elephant|Proboscidea
+                  |          +--| (99)
+                  |          |  +--XP_049714739|Elephas_maximus|Asian_elephant|Proboscidea
+                  |  +-------| (100)
+                  |  |       +--XP_023586869|Trichechus_manatus|Manatee|Sirenia
+                  +--| (64)
+                     |                                        +---------XP_056673571|Monodelphis_domestica|Opossum|Didelphimorphia
+                     |                                     +--| (99)
+                     |                                     |  +--XP_031821305|Sarcophilus_harrisii|Tasmanian_devil|Dasyuromorphia
+                     |                                  +--| (82)
+                     |                                  |  +--XP_072497274|Macropus_eugenii|Tammar_wallaby|Diprotodontia
+                     |  +-------------------------------| (100)
+                     |  |                               +--XP_020822127|Phascolarctos_cinereus|Koala|Diprotodontia
+                     +--| (97)
+                        +-------XP_023447566|Dasypus_novemcinctus|Nine-banded_armadillo|Cingulata
+
+
+Consensus tree in newick format: 
+
+(NP_001394193|Homo_sapiens|Human|Primates:0.0000020542,(XP_001172077|Pan_troglodytes|Chimpanzee|Primates:0.0000020542,XP_063556659|Gorilla_gorilla|Gorilla|Primates:0.0031833483)55:0.0000023303,(XP_002827020|Pongo_abelii|Orangutan|Primates:0.0149772525,((NP_001040616|Macaca_mulatta|Rhesus_macaque|Primates:0.0030511589,XP_003912321|Papio_anubis|Baboon|Primates:0.0028287761)100:0.0224978126,(XP_002747994|Callithrix_jacchus|Marmoset|Primates:0.0742631535,(XP_012631512|Microcebus_murinus|Mouse_lemur|Primates:0.1067476858,(((((NP_001120705|Mus_musculus|Mouse|Rodentia:0.1202551587,NP_001416925|Rattus_norvegicus|Rat|Rodentia:0.0314092341)100:0.1716620032,(NP_001230905|Cricetulus_griseus|Chinese_hamster|Rodentia:0.1684930639,XP_005349834|Microtus_ochrogaster|Prairie_vole|Rodentia:0.0533841489)97:0.0193734622)100:0.0790830769,(((NP_001166211|Cavia_porcellus|Guinea_pig|Rodentia:0.1338151256,NP_001297199|Heterocephalus_glaber|Naked_mole-rat|Rodentia:0.0394165018)100:0.0701023741,XP_040125303|Ictidomys_tridecemlineatus|Thirteen-lined_ground_squirrel|Rodentia:0.0767545530)47:0.0081717050,XP_012868945|Dipodomys_ordii|Kangaroo_rat|Rodentia:0.3838622265)37:0.0027684697)36:0.0082043244,(NP_001075873|Oryctolagus_cuniculus|Rabbit|Lagomorpha:0.0675699410,XP_004594840|Ochotona_princeps|Pika|Lagomorpha:0.2566468849)61:0.0164133381)84:0.0199236414,((((((((NP_001376147|Canis_lupus_familiaris|Dog|Carnivora:0.0032172911,XP_025861192|Vulpes_vulpes|Red_fox|Carnivora:0.0000020542)100:0.0552510905,(((XP_057167334|Ursus_arctos|Brown_bear|Carnivora:0.0031976763,XP_019660679|Ailuropoda_melanoleuca|Giant_panda|Carnivora:0.0032093763)100:0.0302248423,XP_027481717|Zalophus_californianus|California_sea_lion|Carnivora:0.0327114868)98:0.0036883733,XP_004760313|Mustela_putorius_furo|Ferret|Carnivora:0.0530670894)90:0.0149245902)100:0.0366692119,(NP_001009294|Felis_catus|Cat|Carnivora:0.0030495262,XP_042822088|Panthera_tigris|Tiger|Carnivora:0.0000020542)100:0.0827077918)100:0.0549888863,((NP_001189334|Equus_caballus|Horse|Perissodactyla:0.0052501952,XP_014717043|Equus_asinus|Donkey|Perissodactyla:0.0044896777)100:0.0587346638,XP_014645038|Ceratotherium_simum|White_rhinoceros|Perissodactyla:0.1025440581)68:0.0223042759)68:0.0076625849,((((NP_776626|Bos_taurus|Cattle|Artiodactyla:0.0573861577,(NP_001009403|Ovis_aries|Sheep|Artiodactyla:0.0064478047,XP_017920082|Capra_hircus|Goat|Artiodactyla:0.0000020542)100:0.0222973421)100:0.0859024199,XP_057572051|Hippopotamus_amphibius|Hippopotamus|Artiodactyla:0.0548483086)95:0.0133076549,(XP_036692565|Balaenoptera_musculus|Blue_whale|Cetacea:0.0129048020,(((XP_073653870|Tursiops_truncatus|Bottlenose_dolphin|Cetacea:0.1020171101,XP_033278862|Orcinus_orca|Orca|Cetacea:0.0036277754)89:0.0037019761,XP_022451328|Delphinapterus_leucas|Beluga_whale|Cetacea:0.0063282091)96:0.0146808539,XP_028355209|Physeter_catodon|Sperm_whale|Cetacea:0.0063295253)56:0.0000020716)95:0.0067344784)96:0.0137201341,(NP_998989|Sus_scrofa|Pig|Artiodactyla:0.0578890294,(XP_010994816|Camelus_dromedarius|Dromedary_camel|Artiodactyla:0.0000020542,XP_006218839|Vicugna_pacos|Alpaca|Artiodactyla:0.0099493496)100:0.0352656246)96:0.0185965034)100:0.0470257734)52:0.0056265312,(((XP_006102640|Myotis_lucifugus|Little_brown_bat|Chiroptera:0.1324506394,XP_008151723|Eptesicus_fuscus|Big_brown_bat|Chiroptera:0.0886538986)100:0.1392023329,(XP_011357167|Pteropus_vampyrus|Large_flying_fox|Chiroptera:0.0294125363,XP_036078506|Rousettus_aegyptiacus|Egyptian_fruit_bat|Chiroptera:0.0607640423)100:0.0893583336)94:0.0085729865,XP_032947086|Rhinolophus_ferrumequinum|Greater_horseshoe_bat|Chiroptera:0.0729312869)99:0.0677917378)45:0.0079384586,(XP_060060302|Erinaceus_europaeus|European_hedgehog|Eulipotyphla:0.3467770540,XP_054988705|Sorex_araneus|Common_shrew|Eulipotyphla:0.1102589464)92:0.0781771322)94:0.0232487285,(((XP_003416950|Loxodonta_africana|African_elephant|Proboscidea:0.0000020542,XP_049714739|Elephas_maximus|Asian_elephant|Proboscidea:0.0000020542)99:0.0173101143,XP_023586869|Trichechus_manatus|Manatee|Sirenia:0.0551929547)100:0.1360057998,((((XP_056673571|Monodelphis_domestica|Opossum|Didelphimorphia:0.1665177676,XP_031821305|Sarcophilus_harrisii|Tasmanian_devil|Dasyuromorphia:0.0336341740)99:0.0359662248,XP_072497274|Macropus_eugenii|Tammar_wallaby|Diprotodontia:0.0623010060)82:0.0159286636,XP_020822127|Phascolarctos_cinereus|Koala|Diprotodontia:0.0213573122)100:0.5095013421,XP_023447566|Dasypus_novemcinctus|Nine-banded_armadillo|Cingulata:0.1408248150)97:0.0531966062)64:0.0128718792)85:0.0198332991)100:0.0409164772)100:0.0290588315)100:0.0284017892)99:0.0149156864)99:0.0129428379);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t results/phylogeny/TP53_mammals_v0.treefile -m "Q.bird+I{0.213318}+G4{1.03052}" --length 464
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s results/phylogeny/TP53_curated_v0_mafft_for_iqtree.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s results/phylogeny/TP53_curated_v0_mafft_for_iqtree.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Sun Jun 14 12:04:47 2026
+Total CPU time used: 621.474682 seconds (0h:10m:21s)
+Total wall-clock time used: 315.9090908 seconds (0h:5m:15s)
+
