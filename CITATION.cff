@@ -1,1 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this repository, its computational workflow, datasets, results, or derived figures, please cite the associated research work and this repository."
 
+title: "TP53 Evolutionary Conservation Across Mammals"
+
+abstract: >-
+  Reproducible comparative bioinformatics workflow investigating evolutionary
+  conservation and functional constraint at recurrent human TP53 cancer
+  mutation hotspots across mammalian species. The repository integrates
+  curated protein sequences, multiple sequence alignment, residue-level
+  conservation analysis, hotspot mapping, cancer mutation information,
+  permutation-based statistical analysis, phylogenetic reconstruction,
+  structural context, and reproducible research documentation.
+
+type: software
+license: MIT
+
+authors:
+  - family-names: Rawat
+    given-names: Ritika Rajendra
+    orcid: "https://orcid.org/"
+
+  - family-names: Nadar
+    given-names: Sermarani
+
+  - family-names: Uppal
+    given-names: Gursimran Kaur
+
+repository-code: "https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals"
+
+url: "https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals"
+
+keywords:
+  - TP53
+  - p53
+  - cancer genomics
+  - evolutionary conservation
+  - comparative genomics
+  - bioinformatics
+  - computational biology
+  - evolutionary biology
+  - mammalian genomics
+  - mutation hotspots
+  - sequence analysis
+  - phylogenetics
+  - reproducible research
+
+references:
+  - type: article
+    authors:
+      - family-names: Rawat
+        given-names: Ritika Rajendra
+      - family-names: Nadar
+        given-names: Sermarani
+      - family-names: Uppal
+        given-names: Gursimran Kaur
+    title: "Evolutionary Conservation and Functional Constraint of TP53 Mutation Hotspots Across Mammalian Species"
+    year: 2026
+    doi: "10.21203/rs.3.rs-9299199/v1"
+    url: "https://doi.org/10.21203/rs.3.rs-9299199/v1"
+
+repository-artifact: "https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals"
