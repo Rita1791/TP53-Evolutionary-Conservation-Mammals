@@ -1,0 +1,5 @@
+hotspot_class,structural_annotation,n_positions,total_mutation_count,mean_mutation_count,mean_conservation,median_conservation,mean_entropy
+canonical_hotspot,DNA_contact,2,493,246.5,1,1,0
+canonical_hotspot,structural_core,4,396,99,1,1,0
+recurrent_noncanonical,DBD_recurrent,8,529,66.125,0.997767857,1,0.016154222
+recurrent_noncanonical,oligomerization_domain_recurrent,1,59,59,0.821428571,0.821428571,0.67694187
