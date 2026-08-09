@@ -1,1 +1,432 @@
+# ============================================================
+# TP53 Evolutionary Conservation Across Mammals
+# .gitignore
+# ============================================================
 
+# ------------------------------------------------------------
+# Python cache and compiled files
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+*.so
+
+# ------------------------------------------------------------
+# Python virtual environments
+# ------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ------------------------------------------------------------
+# Python packaging / build artifacts
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+MANIFEST
+*.whl
+
+# ------------------------------------------------------------
+# Jupyter Notebook / IPython
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# Jupyter / IPython temporary files
+# ------------------------------------------------------------
+.profile_default/
+.ipython/
+.python_history
+
+# ------------------------------------------------------------
+# Testing / coverage
+# ------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pyre/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ------------------------------------------------------------
+# Python linters / formatters / type checkers
+# ------------------------------------------------------------
+.ruff_cache/
+.pytype/
+.pyre/
+.pyright/
+.cache/
+
+# ------------------------------------------------------------
+# IDEs and editors
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+
+# ------------------------------------------------------------
+# Operating system files
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------
+# Environment variables / secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+secrets/
+credentials/
+credentials.json
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+# Local analysis scratch space
+# ------------------------------------------------------------
+tmp/
+temp/
+scratch/
+analysis_tmp/
+local_output/
+local_results/
+
+# ------------------------------------------------------------
+# Generated alignment / intermediate files
+# ------------------------------------------------------------
+*.aln
+*.aln.gz
+*.dnd
+*.msa
+*.msa.gz
+
+# NOTE:
+# Curated FASTA files that form part of the research record
+# should remain tracked.
+#
+# Therefore, do NOT ignore:
+# data/processed/*.fasta
+# data/processed/*.fa
+# data/raw/*.fasta
+# data/raw/*.fa
+
+# ------------------------------------------------------------
+# Large local sequence-analysis intermediates
+# ------------------------------------------------------------
+*.fasta.tmp
+*.fa.tmp
+*.faa.tmp
+*.fna.tmp
+
+# ------------------------------------------------------------
+# Phylogenetic temporary files
+# ------------------------------------------------------------
+*.bionj
+*.ckp.gz
+*.contree
+*.iqtree~
+*.log.txt
+*.mldist
+*.model.gz
+*.splits.nex
+*.treefile~
+*.ufboot
+*.ufboot.gz
+
+# IMPORTANT:
+# Final phylogenetic outputs such as:
+# results/phylogeny/*.iqtree
+# results/phylogeny/*.treefile
+# should remain tracked.
+
+# ------------------------------------------------------------
+# Temporary scientific-computing output
+# ------------------------------------------------------------
+*.pickle
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# IMPORTANT:
+# Only ignore these when they are temporary local files.
+# Final derived datasets should be explicitly committed.
+
+# ------------------------------------------------------------
+# Local generated figures
+# ------------------------------------------------------------
+# Ignore only temporary/generated scratch figures.
+generated_figures/
+local_figures/
+*.png.tmp
+*.svg.tmp
+*.pdf.tmp
+
+# IMPORTANT:
+# Do NOT ignore the repository's final research figures:
+# figures/main/
+# figures/supplementary/
+
+# ------------------------------------------------------------
+# Local generated result directories
+# ------------------------------------------------------------
+generated_results/
+local_results/
+scratch_results/
+
+# IMPORTANT:
+# Do NOT ignore:
+# results/
+#
+# The results directory is part of the research record and
+# contains documented analytical outputs.
+
+# ------------------------------------------------------------
+# External software installers / binaries
+# ------------------------------------------------------------
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Do not accidentally commit downloaded binaries.
+bin/
+tools/bin/
+
+# ------------------------------------------------------------
+# Downloaded archives
+# ------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# ------------------------------------------------------------
+# Large temporary downloads
+# ------------------------------------------------------------
+downloads/
+downloaded_data/
+external_downloads/
+
+# IMPORTANT:
+# Publicly sourced research data that are intentionally
+# included in the repository should be stored under
+# data/raw/ and committed where licensing permits.
+
+# ------------------------------------------------------------
+# OS / application metadata
+# ------------------------------------------------------------
+*.DS_Store
+Icon?
+.nfs*
+
+# ------------------------------------------------------------
+# LaTeX temporary files
+# ------------------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+
+# IMPORTANT:
+# Do NOT ignore:
+# publication/manuscript_source/*.tex
+# publication/manuscript_source/*.bib
+# publication/manuscript_source/*.cls
+# publication/manuscript_source/*.bst
+#
+# These are research/manuscript source files and should remain
+# version-controlled.
+
+# ------------------------------------------------------------
+# LaTeX generated output
+# ------------------------------------------------------------
+publication/build/
+publication/compiled/
+publication/_build/
+
+# ------------------------------------------------------------
+# R / RStudio
+# ------------------------------------------------------------
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# ------------------------------------------------------------
+# MATLAB
+# ------------------------------------------------------------
+*.asv
+*.m~
+matlab_crash_dump.*
+
+# ------------------------------------------------------------
+# Mac / Linux temporary files
+# ------------------------------------------------------------
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------------------------
+# Cloud / notebook environment metadata
+# ------------------------------------------------------------
+.colab/
+.colab_cache/
+
+# ------------------------------------------------------------
+# Local configuration files
+# ------------------------------------------------------------
+config.local.*
+settings.local.*
+local_config.*
+
+# ------------------------------------------------------------
+# Database / local application files
+# ------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+
+# ------------------------------------------------------------
+# Dependency lock/cache artifacts that are machine-generated
+# ------------------------------------------------------------
+.pip_cache/
+pip-cache/
+.pytest_cache/
+
+# ------------------------------------------------------------
+# Documentation build artifacts
+# ------------------------------------------------------------
+docs/_build/
+site/
+public/
+
+# ------------------------------------------------------------
+# Git internals accidentally copied into subdirectories
+# ------------------------------------------------------------
+**/.git/
+
+# ------------------------------------------------------------
+# Backup copies accidentally created by editors
+# ------------------------------------------------------------
+*.orig
+*.save
+*.backup
+*.old
+
+# ------------------------------------------------------------
+# Research-specific temporary files
+# ------------------------------------------------------------
+*_tmp.csv
+*_tmp.tsv
+*_tmp.txt
+*_tmp.fasta
+*_tmp.fa
+*_tmp.faa
+*_tmp.fna
+
+# ------------------------------------------------------------
+# Temporary alignment / analysis exports
+# ------------------------------------------------------------
+alignment_tmp/
+msa_tmp/
+phylogeny_tmp/
+statistics_tmp/
+
+# ------------------------------------------------------------
+# Local machine-specific configuration
+# ------------------------------------------------------------
+machine_config/
+user_config/
+
+# ------------------------------------------------------------
+# IMPORTANT REPOSITORY POLICY
+# ------------------------------------------------------------
+# The following are intentionally TRACKED because they form
+# part of the scientific record:
+#
+# data/raw/
+# data/processed/
+# results/
+# figures/
+# notebooks/
+# docs/
+# scripts/
+# publication/
+# eccb2026/
+#
+# Do not add broad rules such as:
+#
+# data/
+# results/
+# figures/
+#
+# because doing so would hide the actual research inputs,
+# outputs, and publication assets from version control.
+# ============================================================
