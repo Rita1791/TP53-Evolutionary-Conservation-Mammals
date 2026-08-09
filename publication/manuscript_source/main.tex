@@ -1,0 +1,209 @@
+%% OUP Bioinformatics / ECCB proceedings manuscript prepared from supplied PDF
+\documentclass[namedate,webpdf,contemporary,large]{oup-authoring-template}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{Fig/}}
+\setlength{\emergencystretch}{2em}
+
+\setlength{\textfloatsep}{6pt plus 1pt minus 2pt}
+\setlength{\floatsep}{6pt plus 1pt minus 2pt}
+\setlength{\intextsep}{6pt plus 1pt minus 2pt}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+
+\begin{document}
+
+\journaltitle{Bioinformatics}
+\DOI{DOI added during production}
+\copyrightyear{2026}
+\pubyear{2026}
+\vol{XX}
+\issue{x}
+\access{Published: Date added during production}
+\appnotes{ECCB Proceedings}
+\firstpage{1}
+\subtitle{Genome Informatics}
+
+\title[TP53 hotspot evolutionary conservation]{Evolutionary Conservation of Recurrent Human TP53 Cancer Mutation Hotspots Across Mammalian Species}
+
+\author[1,$\ast$]{Ritika Rajendra Rawat}
+\author[1]{Sermarani Nadar}
+\author[1]{Gursimran Kaur}
+
+\address[1]{\orgdiv{Department of Bioinformatics}, \orgname{Guru Nanak Khalsa College of Arts, Science and Commerce, University of Mumbai}, \orgaddress{\country{India}}}
+\corresp[$\ast$]{Corresponding author. \href{mailto:ritikarvl2627@gmail.com}{ritikarvl2627@gmail.com}}
+
+\received{Date}{0}{2026}
+\revised{Date}{0}{2026}
+\accepted{Date}{0}{2026}
+
+\abstract{TP53 is the most frequently mutated tumor suppressor gene in human cancer, yet the evolutionary constraints underlying recurrent TP53 mutation hotspots remain incompletely characterized. We investigated whether recurrent human TP53 cancer hotspot residues are preferentially located at evolutionarily constrained mammalian positions by integrating comparative genomics, phylogenetic analysis and cancer mutation data. A curated alignment of 56 mammalian TP53 protein sequences was mapped to the 393-residue human TP53 reference. Residue-level conservation was quantified using majority-residue conservation, Shannon entropy and domain-matched statistical analyses. Cancer mutation frequencies were obtained from TCGA PanCancer studies through cBioPortal. The six canonical hotspot residues (R175, G245, R248, R249, R273 and R282) were completely conserved across all mammalian sequences and were significantly more conserved than non-hotspot residues within the DNA-binding domain (Mann--Whitney U, p=0.0156). This pattern remained robust after phylogenetic sensitivity analyses. Across TP53, mutation recurrence showed a significant positive association with evolutionary conservation (Spearman $\rho=0.430$, $p=4.49\times10^{-19}$). Five canonical hotspots ranked among the most frequently mutated TP53 codons, whereas R249 showed complete conservation but lower recurrence, suggesting context-dependent selective pressures. These findings show that recurrent TP53 cancer mutations preferentially occur at evolutionarily constrained and functionally important residues.}
+
+\keywords{TP53, mutation hotspots, comparative genomics, mammalian evolution, cancer genomics, evolutionary oncology, cBioPortal, TCGA PanCancer}
+
+\maketitle
+
+\section{Introduction}
+TP53 is a central tumor suppressor gene that regulates cellular responses to DNA damage, oncogenic stress, genomic instability and other cellular injuries \citep{olivier2010,joerger2008}. Through its role as a transcription factor, p53 influences cell-cycle arrest, apoptosis, senescence, DNA repair and metabolic adaptation. Loss or alteration of TP53 function is therefore a major route through which cancer cells evade normal growth control and acquire selective advantage.
+
+A distinctive feature of TP53 in human cancer is the recurrence of specific missense mutation hotspots \citep{olivier2010,petitjean2007,olivier2002}. Unlike tumor suppressor genes that are frequently inactivated by broadly distributed truncating alterations, TP53 often accumulates recurrent missense mutations within its DNA-binding domain. Codons including R175, G245, R248, R249, R273 and R282 are repeatedly observed across cancer datasets and are widely treated as canonical TP53 hotspots \citep{olivier2010,petitjean2007,olivier2002}. These mutations can impair DNA binding, destabilize the DNA-binding domain, alter transcriptional activity and in some contexts contribute to dominant-negative or gain-of-function effects \citep{olivier2010,joerger2008}. However, the evolutionary constraint of these recurrent hotspot residues across mammals remains an important dimension of their functional interpretation.
+
+Comparative sequence analysis evaluates whether cancer-associated residues occupy constrained positions. Residues conserved across divergent mammalian species are more likely to be functionally important, structurally constrained or intolerant to amino-acid substitution. For TP53, this is especially relevant because the DNA-binding domain is both functionally central and enriched for recurrent cancer mutations. A strict analysis must therefore compare hotspots with non-hotspot residues within the same domain, not only with the entire protein background.
+
+Phylogenetic sampling and cancer recurrence further complicate interpretation. Uneven representation of closely related species can inflate apparent conservation if not evaluated by sensitivity analyses. Conversely, a residue may be highly conserved but infrequently mutated in cancer, whereas another may recur because of tumor-type-specific mutational processes or selective pressures. Pan-cancer datasets therefore provide an opportunity to test whether recurrent TP53 mutation positions are preferentially enriched at evolutionarily constrained residues.
+
+Despite extensive investigation of TP53 mutation hotspots, the relationship between evolutionary constraint, domain-specific conservation, phylogenetic sampling and large-scale cancer mutation recurrence has not been evaluated within a unified framework. Here, we integrate mammalian comparative sequence analysis, domain-matched conservation testing, phylogenetic sensitivity analyses, maximum-likelihood phylogenetic reconstruction and TCGA PanCancer/cBioPortal mutation-frequency data to investigate whether recurrent human TP53 cancer hotspot residues occupy evolutionarily constrained positions across mammals.
+
+\section{Materials and methods}
+\subsection{Study design}
+This study integrated comparative mammalian protein-sequence analysis, residue-level conservation scoring, domain-matched statistical testing, phylogenetic sensitivity analysis, cancer mutation-frequency integration, structural-class annotation and maximum-likelihood phylogenetic reconstruction. The primary analysis focused on six canonical human TP53 cancer hotspot residues: R175, G245, R248, R249, R273 and R282. These residues were analyzed using human TP53 residue numbering and compared with non-hotspot residues within the TP53 DNA-binding domain and whole-protein background residues.
+
+\subsection{Mammalian TP53 sequence retrieval and alignment}
+A seed list of mammalian species was assembled to represent major mammalian orders, including Primates, Rodentia, Carnivora, Artiodactyla, Perissodactyla, Proboscidea, Cetacea, Chiroptera, Lagomorpha, Eulipotyphla, Cingulata, Sirenia and marsupial lineages. TP53 protein sequences were retrieved from NCBI using automated accession search and candidate selection. Candidate sequences were prioritized using TP53/p53 annotation terms, sequence-length compatibility with canonical TP53 protein size and exclusion of partial, pseudogene-like, hypothetical, unnamed or low-quality records where detected.
+
+After retrieval and quality control, 56 mammalian TP53 protein sequences were retained. All retained sequences passed accession, sequence-length and annotation-flag screening in the final accession audit. Quality-control checks included sequence length screening, ambiguous amino acids, internal stop codons, partial annotations, pseudogene annotations and noncanonical description flags. The curated sequence set was stored as \texttt{TP53\_curated\_v0.fasta}. Curated sequences were aligned using MAFFT \citep{katoh2013}. The alignment was mapped to the human TP53 reference sequence by tracking ungapped human residue positions across alignment columns, enabling each alignment column to be assigned to a human TP53 residue from 1 to 393. The six canonical hotspot positions were explicitly checked in the human reference sequence to confirm correct residue mapping.
+
+\subsection{Domain annotation and conservation metrics}
+Human TP53 residues were assigned to transactivation domain, proline-rich region, DNA-binding domain, oligomerization domain, C-terminal regulatory region and interdomain or unannotated categories. The DNA-binding domain was used as the primary domain-matched control because all six canonical hotspots are located within this domain.
+
+For each human TP53 residue, conservation was calculated from the corresponding alignment column. Gap characters were excluded from amino-acid frequency calculations but retained for gap-fraction reporting. Metrics included majority-residue conservation, human-residue conservation, Shannon entropy, normalized entropy, unique residue count, gap count and gap fraction. Residues with high gap fractions were excluded from selected comparisons where specified. Canonical hotspots were compared with non-hotspot residues from the DNA-binding domain and with broader whole-protein background residues.
+
+\subsection{Statistical testing and sensitivity analyses}
+Canonical hotspot conservation was compared with control groups using one-sided Mann--Whitney U tests. The primary comparison tested whether canonical hotspots had greater conservation than non-hotspot residues within the DNA-binding domain. Additional comparisons used whole-protein non-hotspot residues and terminal-domain residues. Effect size was estimated using Cliff's delta. Bootstrap confidence intervals for mean conservation differences were calculated by resampling hotspot and control groups with replacement. Entropy-based comparisons used the reciprocal hypothesis that canonical hotspots had lower entropy than controls.
+
+DBD-matched permutation testing provided randomized validation. For each query set, DNA-binding-domain residue sets of equal size were randomly sampled from the DBD background, and the observed mean conservation of the query set was compared with the resulting null distribution. Permutation analyses were conducted for the canonical hotspots and for top 10, top 20 and top 30 recurrently mutated TP53 codon sets.
+
+To test whether hotspot conservation was driven by overrepresentation of lineages, sensitivity analyses were performed on the full dataset, after excluding primates, after excluding rodents, after excluding both primates and rodents and after reducing the dataset to one representative species per mammalian order. For each dataset, residue-level conservation was recalculated and canonical hotspot conservation was compared with DNA-binding-domain non-hotspot controls. An extended recurrent hotspot panel was also analyzed as a provisional secondary analysis.
+
+\subsection{Cancer mutation-frequency integration}
+Human TP53 mutation data were retrieved from TCGA PanCancer Atlas studies through the cBioPortal REST API \citep{cerami2012,gao2013,liu2018}. TP53 mutations were queried using Entrez Gene ID 7157 across available PanCancer Atlas studies. Retrieved records were filtered to extract protein-change annotations and TP53 codon positions. Mutation counts were aggregated by human TP53 codon. For each codon, the number of mutations, contributing cancer studies, unique samples, protein changes, mutation types, mutation-frequency fraction, mutation-frequency percentage and mutation-frequency rank were calculated. The codon-level table was merged with the residue-level mammalian conservation table using human TP53 residue position.
+
+Spearman rank correlations were calculated between TP53 mutation count and conservation metrics across all 393 residues, within the DNA-binding domain, among mutated codons only and among mutated codons within the DNA-binding domain. The top 10, top 20 and top 30 mutated codons were also tested for elevated conservation relative to DNA-binding-domain non-top-mutated background residues using one-sided Mann--Whitney U tests.
+
+\subsection{Structural annotation, phylogeny and reproducibility}
+Canonical TP53 hotspots were manually annotated into structural classes. R248 and R273 were classified as DNA-contact hotspots. R175, G245, R249 and R282 were classified as structural-core hotspots. Additional recurrent noncanonical codons among top mutated positions were annotated as recurrent DNA-binding-domain codons or recurrent oligomerization-domain codons. Structural-class summaries included mutation counts, mean mutation count, mean conservation, median conservation and mean entropy.
+
+Maximum-likelihood phylogenetic reconstruction was performed using IQ-TREE v2.2.6 \citep{minh2020}. The best-fitting amino-acid substitution model was selected using ModelFinder based on BIC \citep{kalyaanamoorthy2017}. ModelFinder identified Q.bird+I+G4 as the optimal model. Tree inference used 1,000 ultrafast bootstrap replicates and 1,000 SH-aLRT replicates \citep{hoang2018}. Figures and tables were generated using Python, with Biopython used for sequence and phylogenetic file handling \citep{cock2009}. The analysis snapshot was frozen as release version v0 before manuscript drafting.
+
+\section{Results}
+\subsection{Curated mammalian TP53 alignment and conservation landscape}
+A curated mammalian TP53 protein dataset was assembled and aligned to evaluate evolutionary constraint at recurrent human TP53 cancer mutation hotspots. After sequence retrieval and quality control, 56 mammalian TP53 protein sequences were retained. The alignment was mapped to the human TP53 reference sequence, enabling residue-level analysis across 393 positions. Domain annotations included the transactivation domain, proline-rich region, DNA-binding domain, oligomerization domain and C-terminal regulatory region.
+
+Residue-level conservation varied across TP53 domains. The DNA-binding domain showed high overall conservation, with mean majority-residue conservation of 0.936 and median conservation of 1.000. The transactivation domain and proline-rich region showed lower average conservation, consistent with greater variability outside the structured DNA-binding core. This residue-level conservation landscape provided the basis for domain-matched hotspot comparisons (Fig.~\ref{fig:conservation}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figure1_conservation_profile.png}
+\caption{Residue-level conservation profile of mammalian TP53. Residue-level majority conservation across 393 human TP53 positions was calculated from a curated alignment of 56 mammalian TP53 protein sequences. The DNA-binding domain is shaded, and the six canonical cancer hotspot residues R175, G245, R248, R249, R273 and R282 are marked with vertical dashed lines.}
+\label{fig:conservation}
+\end{figure}
+
+\subsection{Canonical hotspots are invariant and more conserved than domain controls}
+The six canonical hotspot residues R175, G245, R248, R249, R273 and R282 were mapped onto the mammalian alignment using human TP53 numbering. All six residues were invariant across the 56-species dataset. Each hotspot showed majority-residue conservation of 1.000, human-residue conservation of 1.000, Shannon entropy of 0.000 and no alignment gaps. This invariant pattern was observed for both DNA-contact hotspots (R248 and R273) and structural-core hotspots (R175, G245, R249 and R282).
+
+Because the TP53 DNA-binding domain is highly conserved, hotspots were compared with domain-matched non-hotspot residues. Canonical hotspots showed higher majority-residue conservation than DNA-binding-domain non-hotspot residues, with mean conservation of 1.000 versus 0.934. This difference was significant using a one-sided Mann--Whitney U test (U=819.0, p=0.0156), with a moderate effect size by Cliff's delta ($\delta=0.476$). Human-residue conservation showed the same pattern: hotspot mean 1.000 versus 0.910 for DNA-binding-domain controls (U=819.0, p=0.0156; $\delta=0.476$). Entropy analysis gave the reciprocal result, with hotspots showing lower Shannon entropy than DNA-binding-domain non-hotspot residues (0.000 versus 0.304; one-sided p=0.0156). DBD-matched permutation testing produced a null mean conservation of 0.936, whereas the observed canonical hotspot mean was 1.000, yielding an empirical one-sided p-value of 0.0236 (Fig.~\ref{fig:hotspot}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figure2_hotspot_controls.png}
+\caption{Canonical TP53 hotspots show elevated conservation relative to domain-matched controls. Boxplot comparison of majority-residue conservation between canonical TP53 hotspot residues, DNA-binding-domain non-hotspot residues and whole-protein non-hotspot background residues. Canonical hotspots showed complete conservation and were significantly more conserved than DNA-binding-domain controls.}
+\label{fig:hotspot}
+\end{figure}
+
+\subsection{Phylogenetic sensitivity supports robustness}
+Phylogenetic sensitivity analyses tested whether the hotspot-conservation signal was driven by overrepresentation of related mammalian lineages. Canonical hotspots remained more conserved than DNA-binding-domain background residues in the full dataset, after excluding primates, after excluding rodents, after excluding both primates and rodents and after reducing the dataset to one species per mammalian order. The mean conservation difference between hotspots and DNA-binding-domain controls was 0.066 in the full dataset (p=0.0156), 0.067 after excluding primates (p=0.0196), 0.063 after excluding rodents (p=0.0245), 0.064 after excluding both primates and rodents (p=0.0316) and 0.082 in the one-species-per-order dataset (p=0.0355). An extended recurrent hotspot panel showed the same direction of effect across sensitivity datasets, with positive mean conservation differences and significant one-sided tests (Fig.~\ref{fig:sensitivity}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figure3_phylo_sensitivity.png}
+\caption{Phylogenetic sensitivity analysis of canonical hotspot conservation. Sensitivity analysis comparing canonical hotspot conservation with DNA-binding-domain non-hotspot conservation across reduced mammalian datasets. The signal remained positive after removing major taxonomic groups and after order-level downsampling.}
+\label{fig:sensitivity}
+\end{figure}
+
+\subsection{Human TP53 mutation recurrence is associated with mammalian conservation}
+TP53 mutation-frequency data from TCGA PanCancer/cBioPortal studies contained 4,225 TP53 mutations mapping to 300 codons. The most frequently mutated codons included R273, R248, R175, R213, R282, G245, Y220, H179, T125 and H193. Mutation recurrence was positively associated with mammalian conservation. Across all 393 residues, mutation count correlated with majority-residue conservation (Spearman $\rho=0.430$, $p=4.49\times10^{-19}$) and human-residue conservation ($\rho=0.430$, $p=4.19\times10^{-19}$). Within the DNA-binding domain, mutation count remained correlated with majority-residue conservation ($\rho=0.368$, $p=1.68\times10^{-7}$) and human-residue conservation ($\rho=0.374$, $p=9.57\times10^{-8}$). Among mutated codons only, the correlation remained positive across all mutated residues and within the DNA-binding domain.
+
+Top recurrent codons also showed elevated conservation compared with DNA-binding-domain background. The top 10 mutated codons had mean majority-residue conservation of 1.000 compared with 0.932 for DNA-binding-domain background residues (p=0.00244). The top 20 and top 30 mutated codons also showed higher conservation than DNA-binding-domain controls. DBD-matched permutation analysis further supported conservation enrichment among recurrently mutated codons: top 10, top 20 and top 30 recurrent codon sets produced empirical one-sided p-values of 0.00182, 0.00139 and 0.00003, respectively (Fig.~\ref{fig:recurrence}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figure4_mutation_conservation.png}
+\caption{Human TP53 mutation recurrence is positively associated with mammalian conservation. Scatter plot showing the relationship between TP53 mutation count from TCGA PanCancer/cBioPortal data and mammalian majority-residue conservation. Mutation recurrence was positively associated with mammalian conservation across all TP53 residues and within the DNA-binding domain.}
+\label{fig:recurrence}
+\end{figure}
+
+\subsection{Canonical and recurrent hotspots in structural context}
+Five of the six canonical TP53 hotspot residues ranked among the six most frequently mutated TP53 codons in the TCGA PanCancer/cBioPortal dataset. R273 ranked first with 268 mutations, R248 second with 225 mutations, R175 third with 167 mutations, R282 fifth with 91 mutations and G245 sixth with 91 mutations. R249 was also fully conserved across mammals but ranked nineteenth, with 47 mutations.
+
+Structural-class annotation separated canonical hotspots into DNA-contact and structural-core classes. The DNA-contact hotspots R273 and R248 together accounted for 493 mutations and showed complete mammalian conservation. The structural-core canonical hotspots R175, G245, R249 and R282 together accounted for 396 mutations and also showed complete conservation. Recurrent noncanonical DNA-binding-domain codons, including R213, Y220, H179, T125, H193, C176, R158 and R280, showed high conservation as a group, with mean conservation of 0.998 and median conservation of 1.000. These findings indicate that recurrent TP53 mutation targets concentrate within highly conserved functional regions, while the lower PanCancer rank of R249 suggests tumor type, mutational exposure or context-specific selection also influence recurrence (Fig.~\ref{fig:domainmap}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figure5_domain_lollipop.png}
+\caption{TP53 domain-level mutation map with canonical and recurrent hotspot annotations. Lollipop-style map of recurrent TP53 mutation counts across the human TP53 protein sequence. The figure highlights the concentration of recurrent TP53 mutations within the DNA-binding domain, including DNA-contact hotspots and structural-core hotspots.}
+\label{fig:domainmap}
+\end{figure}
+
+\subsection{Maximum-likelihood phylogeny supports taxonomic coherence}
+A maximum-likelihood phylogeny reconstructed from the curated mammalian TP53 protein alignment used IQ-TREE with ModelFinder-based model selection. The best-fit model was Q.bird+I+G4. The inferred tree broadly recovered expected mammalian taxonomic groupings, including primate, rodent, carnivore, artiodactyl/cetacean, chiropteran, proboscidean and marsupial relationships. This supported the taxonomic coherence of the curated TP53 dataset and provided an evolutionary framework for interpreting residue conservation patterns (Fig.~\ref{fig:phylogeny}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.88\columnwidth]{figure6_phylogeny.png}
+\caption{Maximum-likelihood phylogeny of mammalian TP53 protein sequences. Maximum-likelihood phylogeny reconstructed from the curated 56-sequence mammalian TP53 protein alignment using IQ-TREE. ModelFinder selected Q.bird+I+G4 as the best-fit amino-acid substitution model. Branch support was estimated using 1000 ultrafast bootstrap replicates and 1000 SH-aLRT replicates \citep{minh2020,kalyaanamoorthy2017,hoang2018}.}
+\label{fig:phylogeny}
+\end{figure}
+
+\section{Discussion}
+This study integrated mammalian comparative sequence analysis, domain-matched conservation testing, phylogenetic sensitivity analysis, cancer mutation-frequency data, structural-class annotation and maximum-likelihood phylogeny to evaluate whether recurrent human TP53 cancer hotspots occupy evolutionarily constrained residues. The central finding is that canonical TP53 cancer hotspots are invariant across a curated mammalian TP53 alignment and are more conserved than non-hotspot residues within the already highly conserved DNA-binding domain. Integration with TCGA PanCancer/cBioPortal mutation-frequency data further showed that TP53 mutation recurrence is positively associated with mammalian residue conservation.
+
+Complete conservation of R175, G245, R248, R249, R273 and R282 across 56 mammalian TP53 sequences is consistent with the essential functional role of these residues within the DNA-binding domain. Importantly, the analysis did not rely only on whole-protein background comparisons, which would risk inflating significance because the DNA-binding domain is more conserved than several TP53 regions. Even under stricter domain-matched comparison, hotspots showed significantly higher conservation and lower entropy than background residues.
+
+Phylogenetic sensitivity analyses excluded primates, rodents, both primates and rodents, and reduced the dataset to one representative species per order. The hotspot-conservation signal remained positive in all datasets. This does not eliminate all phylogenetic non-independence, but it strengthens the conclusion that the observed pattern is not simply an artifact of primate or rodent sampling.
+
+The integration of cancer mutation-frequency data adds a recurrence dimension. Across 4,225 TP53 mutations from TCGA PanCancer/cBioPortal data, mutation count was positively associated with mammalian conservation across all residues and within the DNA-binding domain. Five canonical hotspots ranked among the six most frequently mutated codons, while R249 remained fully conserved but ranked lower in the PanCancer dataset. This distinction indicates that conservation alone does not determine recurrence; mutation exposure, tumor type, nucleotide context, tissue-specific selection and cancer-specific fitness effects likely influence which constrained residues become recurrent hotspots.
+
+Structural-class annotation refined the interpretation. R248 and R273, the DNA-contact hotspots, together showed the highest mutation burden among canonical hotspots. R175, G245, R249 and R282, the structural-core hotspots, were also completely conserved. DNA-contact and structural-core mutations may disrupt TP53 through different mechanisms: direct impairment of DNA binding versus destabilization or conformational alteration of the DNA-binding domain. The high conservation and recurrence of both classes support the conclusion that recurrent TP53 cancer mutations concentrate at residues with strong functional constraint.
+
+The recurrent noncanonical codons also showed high conservation, especially within the DNA-binding domain. Codons such as R213, Y220, H179, T125, H193, C176, R158 and R280 were frequently mutated and highly conserved. Thus, the canonical six-hotspot model captures only part of the recurrent TP53 mutation landscape, and a broader recurrent-codon framework may better represent the relationship between evolutionary constraint and cancer mutation recurrence.
+
+This work has limitations. First, the study used protein-sequence conservation rather than codon-level evolutionary models; future work could integrate codon-aware alignments and site-specific selection estimates. Second, although the mammalian dataset is taxonomically broad, representation across orders remains uneven. Third, cBioPortal/TCGA PanCancer mutation counts reflect available tumor datasets and are not universal mutation probabilities. Tumor-type-specific analyses may reveal stronger or weaker recurrence patterns for individual codons, especially R249. Fourth, structural annotation was functional-class based and should be expanded using experimentally resolved TP53 structures, DNA-contact maps, zinc-binding annotations and domain-stability data.
+
+The results should be interpreted as evidence of association, not causation. Evolutionary conservation does not cause cancer mutation recurrence by itself. Rather, conservation marks residues likely to be functionally constrained, and cancer recurrence may emerge when mutation at such residues disrupts TP53 function in ways that provide selective advantage to tumor cells. The analysis supports a model in which recurrent TP53 hotspots are enriched at evolutionarily constrained and functionally sensitive residues, while additional structural, biochemical and tumor-type-specific analyses are required to explain individual hotspot recurrence.
+
+\section{Conclusions}
+This study provides a reproducible computational framework linking mammalian TP53 evolutionary constraint with recurrent human cancer mutation patterns. Canonical TP53 cancer hotspots were invariant across the curated mammalian alignment, significantly more conserved than DNA-binding-domain background residues and supported by domain-matched permutation testing. Integration with TCGA PanCancer/cBioPortal mutation-frequency data indicates that recurrent TP53 mutation positions are enriched among evolutionarily constrained residues. These findings support the interpretation that recurrent TP53 cancer hotspots concentrate at functionally sensitive residues, while preserving the distinction that conservation is an indicator of functional constraint rather than a direct cause of mutation recurrence.
+
+\section{Data and code availability}
+Mammalian TP53 protein sequences were obtained from the NCBI Protein database, and TP53 mutation data were retrieved from the TCGA PanCancer Atlas through cBioPortal. Processed datasets generated during this study, including residue-level conservation tables, mutation-frequency summaries, merged annotation tables, statistical outputs, phylogenetic outputs and supplementary materials, are available from the corresponding author upon reasonable request. Custom Python scripts for sequence processing, conservation analysis, statistical testing, mutation-frequency integration, phylogenetic analyses and figure generation are available from the corresponding author upon reasonable request.
+
+\section{Declarations}
+\subsection{Author contributions}
+Ritika Rajendra Rawat conceived and designed the study, developed the computational workflow, curated the mammalian TP53 dataset, performed the bioinformatics analyses, statistical analyses and phylogenetic reconstruction, integrated TCGA/cBioPortal mutation data, generated figures and tables, interpreted the results and drafted the manuscript. Sermarani Nadar and Gursimran Kaur contributed to scientific discussions, interpretation of results, critical manuscript review and approved the final version for submission. All authors read and approved the final manuscript.
+
+\subsection{Funding}
+This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.
+
+\subsection{Competing interests}
+The authors declare no competing interests.
+
+\subsection{Ethics approval}
+This study used publicly available protein sequence data and publicly accessible de-identified cancer mutation data. No human participants, clinical intervention, animal experimentation or identifiable private data were involved.
+
+\subsection{Acknowledgements}
+The authors acknowledge the open availability of NCBI Protein resources, cBioPortal, TCGA PanCancer Atlas data, MAFFT, IQ-TREE, Biopython, SciPy, pandas and related open-source computational tools that enabled this analysis.
+
+\section{Supplementary material}
+Supplementary Figure S1 shows extended recurrent TP53 codon sensitivity analysis. Supplementary Figure S2 shows conservation of the top 30 recurrent TP53 mutated codons. Supplementary Figure S3 shows the distribution of TP53 mutation counts across the human protein sequence. Supplementary Tables S1--S5 include the TP53 sequence accession and audit table, DBD-matched permutation statistics, residue-level conservation table, cBioPortal/TCGA PanCancer TP53 mutation-frequency table and structural-class summary of canonical and recurrent TP53 codons.
+
+\bibliographystyle{oup-abbrvnat}
+\bibliography{references}
+
+\end{document}
