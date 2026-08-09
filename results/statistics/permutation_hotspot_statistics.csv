@@ -1,0 +1,5 @@
+comparison,n_query,observed_mean_conservation,null_mean_conservation,null_2.5_percentile,null_97.5_percentile,empirical_p_one_sided
+canonical_6_vs_DBD_permutation,6,1,0.935845368,0.8125,0.99702381,0.023589764
+top10_mutated_codons_vs_DBD_permutation,10,1,0.935881298,0.846428571,0.991071429,0.001819982
+top20_mutated_codons_vs_DBD_permutation,19,0.992481203,0.935910678,0.876879699,0.979323308,0.001389986
+top30_mutated_codons_vs_DBD_permutation,28,0.994260204,0.935896467,0.889587199,0.973133117,3.00E-05
