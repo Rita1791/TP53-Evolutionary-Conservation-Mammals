@@ -64,3 +64,105 @@ The complete analytical logic can be summarized as:
                         │
                         ▼
               Evolutionary constraint
+
+# 🧠 3. Complete Workflow
+
+The complete analytical logic can be summarized as:
+
+```text
+
+                     ┌─────────────────────┐
+                     │  PUBLIC RESOURCES   │
+                     │ NCBI / UniProt /    │
+                     │ cBioPortal / TCGA   │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │  DATA CURATION      │
+                     │  56 mammalian TP53  │
+                     │      sequences       │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │       MAFFT         │
+                     │ Multiple Sequence   │
+                     │      Alignment      │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ RESIDUE-LEVEL       │
+                     │ CONSERVATION        │
+                     └──────────┬──────────┘
+                                │
+             ┌──────────────────┼──────────────────┐
+             │                  │                  │
+             ▼                  ▼                  ▼
+      Canonical hotspots   DBD controls      Mutation data
+       R175/G245/R248       matched set      TCGA/cBioPortal
+       R249/R273/R282
+             │                  │                  │
+             └──────────────────┼──────────────────┘
+                                ▼
+                     ┌─────────────────────┐
+                     │ STATISTICAL TESTING │
+                     │ Mann–Whitney        │
+                     │ Cliff's delta       │
+                     │ Bootstrap           │
+                     │ Permutation         │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ MUTATION–           │
+                     │ CONSERVATION        │
+                     │ ASSOCIATION         │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │     IQ-TREE         │
+                     │ Phylogenetic        │
+                     │ reconstruction      │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ PHYLOGENETIC        │
+                     │ SENSITIVITY         │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ STRUCTURAL CONTEXT  │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ BIOLOGICAL          │
+                     │ INTERPRETATION      │
+                     └─────────────────────┘
+
+🧬 4. From Sequence → Constraint → Mutation → Evolution → Hypothesis
+
+Mammalian TP53 sequences
+          ↓
+      Alignment
+          ↓
+Residue conservation
+          ↓
+Human cancer hotspots
+          ↓
+Domain-matched comparison
+          ↓
+Statistical validation
+          ↓
+Mutation recurrence
+          ↓
+Phylogenetic robustness
+          ↓
+Structural interpretation
+          ↓
+Reproducible biological hypothesis
