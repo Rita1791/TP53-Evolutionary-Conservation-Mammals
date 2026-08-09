@@ -1,21 +1,27 @@
 # 🧬 Data
 
-> **Data architecture for the comparative evolutionary analysis of TP53 across mammals.**
+> **Curated biological inputs and analysis-ready datasets supporting the TP53 evolutionary-conservation study across mammals.**
 
-This directory separates the biological resources used as **inputs** from datasets produced through **curation and computational processing**.
+This directory contains the data resources used to connect **human TP53 cancer-associated hotspots** with **mammalian evolutionary conservation, mutation recurrence, and structural context**.
+
+The data are separated into two layers:
 
 ```text
-                         DATA LAYER
-                             │
-              ┌──────────────┴──────────────┐
-              │                             │
-              ▼                             ▼
-          data/raw/                   data/processed/
-        Source resources             Analysis-ready data
-              │                             │
-              └──────────────┬──────────────┘
-                             ▼
-                    Comparative analysis
-                             │
-                             ▼
-                         results/
+                    DATA
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+          ▼                     ▼
+       🗃️ RAW              🧪 PROCESSED
+          │                     │
+          │                     │
+ Original / source-level     Curated and
+ biological resources       analysis-ready data
+          │                     │
+          └──────────┬──────────┘
+                     ▼
+              Computational
+                 analysis
+                     │
+                     ▼
+                 Results
