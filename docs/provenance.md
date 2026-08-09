@@ -1003,33 +1003,3 @@ The final dataset and analysis can be represented as:
                               ▼
                        INTERPRETATION
 ```
-
----
-
-## ♻️ Provenance in One Sentence
-
-> **The repository preserves a traceable path from publicly accessible biological records and cancer-genomics resources through sequence curation and computational analysis to the evolutionary, statistical, and structural evidence used to interpret recurrent human TP53 cancer mutation hotspots across mammals.**
-
-````
-
-### Why this is the right next file
-
-This is deliberately **not just documentation for the sake of documentation**. It establishes the chain a serious PI will care about:
-
-**source → accession → curated sequence → analysis → result.**
-
-It also explicitly separates **what your repository can reproduce from what it cannot claim to reproduce experimentally**. That distinction matters.
-
-One thing I am **not** doing is inventing exact accession numbers, download dates, database versions, or sequence-selection decisions that aren't explicitly established in the material you've provided. Those should come from your actual `TP53_sequence_accession_audit.csv` and source records. If we fabricate them just to make the README look polished, we'd be making the repository *look* more rigorous while actually making it less trustworthy.
-
-### After you paste this
-
-The next three files should be completed in this order:
-
-```text
-docs/
-├── provenance.md                    ← NOW
-├── statistical_analysis.md          ← NEXT
-├── reproducibility.md               ← THEN
-└── interpretation_and_limitations.md
-````
