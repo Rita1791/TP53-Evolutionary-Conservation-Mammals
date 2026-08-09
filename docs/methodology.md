@@ -65,11 +65,9 @@ The complete analytical logic can be summarized as:
                         ▼
               Evolutionary constraint
 
-
 ---
 
-
-# 🧠 3. Complete Workflow
+**# 🧠 3. Complete Workflow**
 
 The complete analytical logic can be summarized as:
 
@@ -85,7 +83,7 @@ The complete analytical logic can be summarized as:
                      ┌─────────────────────┐
                      │  DATA CURATION      │
                      │  56 mammalian TP53  │
-                     │      sequences       │
+                     │      sequences      │
                      └──────────┬──────────┘
                                 │
                                 ▼
@@ -149,12 +147,10 @@ The complete analytical logic can be summarized as:
                      │ INTERPRETATION      │
                      └─────────────────────┘
 
-
 ---
 
-
-🧬 4. From Sequence → Constraint → Mutation → Evolution → Hypothesis
-
+**🧬 4. From Sequence → Constraint → Mutation → Evolution → Hypothesis
+**
 Mammalian TP53 sequences
           ↓
       Alignment
