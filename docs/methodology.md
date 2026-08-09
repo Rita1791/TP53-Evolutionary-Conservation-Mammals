@@ -65,6 +65,7 @@ The complete analytical logic can be summarized as:
                         ▼
               Evolutionary constraint
 
+
 # 🧠 3. Complete Workflow
 
 The complete analytical logic can be summarized as:
