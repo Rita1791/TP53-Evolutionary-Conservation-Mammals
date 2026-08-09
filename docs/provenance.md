@@ -11,21 +11,37 @@ This document describes the provenance of the datasets used throughout the **TP5
 The purpose of maintaining an explicit provenance record is to ensure that every major computational input can be traced from:
 
 ```text
+
 Public biological resource
-        ↓
+
+        ↓
+
 Source record / accession
-        ↓
+
+        ↓
+
 Sequence or dataset retrieval
-        ↓
+
+        ↓
+
 Curation
-        ↓
+
+        ↓
+
 Analysis-ready dataset
-        ↓
+
+        ↓
+
 Computational analysis
-        ↓
+
+        ↓
+
 Results
-        ↓
+
+        ↓
+
 Figures / manuscript
+
 ````
 
 The repository therefore treats provenance as part of the scientific evidence rather than as administrative metadata.
@@ -37,28 +53,51 @@ The repository therefore treats provenance as part of the scientific evidence ra
 The repository separates biological inputs into three principal layers:
 
 ```text
+
 ┌─────────────────────────────────────────────┐
-│                 RAW SOURCES                 │
-│                                             │
-│ Public databases, reference structures,     │
-│ cancer mutation resources and metadata      │
+
+│                 RAW SOURCES                 │
+
+│                                             │
+
+│ Public databases, reference structures,     │
+
+│ cancer mutation resources and metadata      │
+
 └──────────────────────┬──────────────────────┘
-                       │
-                       ▼
+
+                       │
+
+                       ▼
+
 ┌─────────────────────────────────────────────┐
-│              PROCESSED DATA                 │
-│                                             │
-│ Curated sequences, accession audits,        │
-│ conservation tables and derived datasets    │
+
+│              PROCESSED DATA                 │
+
+│                                             │
+
+│ Curated sequences, accession audits,        │
+
+│ conservation tables and derived datasets    │
+
 └──────────────────────┬──────────────────────┘
-                       │
-                       ▼
+
+                       │
+
+                       ▼
+
 ┌─────────────────────────────────────────────┐
-│                  RESULTS                    │
-│                                             │
-│ Statistical outputs, hotspot analyses,      │
-│ mutation analyses and phylogenetic files    │
+
+│                  RESULTS                    │
+
+│                                             │
+
+│ Statistical outputs, hotspot analyses,      │
+
+│ mutation analyses and phylogenetic files    │
+
 └─────────────────────────────────────────────┘
+
 ```
 
 This distinction is intentional:
@@ -71,25 +110,38 @@ This distinction is intentional:
 
 The human TP53 protein is the reference coordinate system for the comparative analysis.
 
-| Property          | Reference                   |
+| Property          | Reference                   |
+
 | ----------------- | --------------------------- |
-| Gene              | **TP53**                    |
-| Protein           | Cellular tumour antigen p53 |
-| Species           | *Homo sapiens*              |
-| UniProt accession | **P04637**                  |
-| Protein length    | **393 amino acids**         |
+
+| Gene              | **TP53**                    |
+
+| Protein           | Cellular tumour antigen p53 |
+
+| Species           | *Homo sapiens*              |
+
+| UniProt accession | **P04637**                  |
+
+| Protein length    | **393 amino acids**         |
 
 The human reference sequence establishes the residue numbering used throughout the hotspot and conservation analyses.
 
 This is particularly important for recurrent cancer-associated positions such as:
 
 ```text
+
 R175
+
 G245
+
 R248
+
 R249
+
 R273
+
 R282
+
 ```
 
 These positions are interpreted according to the human TP53 reference sequence rather than raw alignment-column numbers.
@@ -105,7 +157,9 @@ The comparative analysis uses a curated mammalian TP53 protein dataset containin
 The analysis-ready FASTA resource is stored at:
 
 ```text
+
 data/processed/TP53_curated.fasta
+
 ```
 
 This file represents the curated sequence collection used for downstream comparative analysis.
@@ -113,7 +167,9 @@ This file represents the curated sequence collection used for downstream compara
 The corresponding accession-level audit is stored at:
 
 ```text
+
 data/processed/TP53_sequence_accession_audit.csv
+
 ```
 
 The audit provides a traceable relationship between the analyzed sequences and their source identifiers.
@@ -133,10 +189,15 @@ The principal source used for sequence accession and genomic/protein information
 NCBI provides:
 
 * nucleotide and protein sequence records;
+
 * accession identifiers;
+
 * organism information;
+
 * RefSeq records;
+
 * assembly information;
+
 * and associated annotation.
 
 The repository retains accession information rather than treating downloaded sequences as anonymous files.
@@ -154,15 +215,21 @@ The human TP53 reference is anchored to:
 Reference:
 
 ```text
+
 P04637
+
 ```
 
 UniProt provides the standardized protein-level reference used for:
 
 * human TP53 sequence definition;
+
 * residue numbering;
+
 * protein annotation;
+
 * functional interpretation;
+
 * and cross-reference information.
 
 ---
@@ -176,9 +243,13 @@ The purpose of the dataset is not simply to maximize the number of sequences.
 Instead, the dataset is intended to provide a comparative mammalian framework in which:
 
 * TP53 homologues can be aligned;
+
 * homologous residue positions can be identified;
+
 * conservation can be quantified;
+
 * cancer-associated human residues can be mapped;
+
 * and phylogenetic relationships can be considered.
 
 The final dataset should therefore be interpreted as a **curated comparative sampling of mammalian TP53**, rather than a complete catalogue of all available mammalian TP53 sequences.
@@ -220,19 +291,29 @@ The accession audit is one of the principal reproducibility resources in the rep
 Location:
 
 ```text
+
 data/processed/TP53_sequence_accession_audit.csv
+
 ```
 
 The audit is intended to provide a structured record connecting:
 
 ```text
+
 Species
-   ↓
+
+   ↓
+
 Accession
-   ↓
+
+   ↓
+
 TP53 sequence
-   ↓
+
+   ↓
+
 Curated dataset
+
 ```
 
 This is preferable to relying solely on a FASTA file because a FASTA sequence by itself does not necessarily communicate sufficient biological provenance.
@@ -248,15 +329,25 @@ If the source sequence changes, the downstream analysis can change.
 Therefore:
 
 ```text
+
 Different sequence
-       ↓
+
+       ↓
+
 Different alignment
-       ↓
+
+       ↓
+
 Different residue correspondence
-       ↓
+
+       ↓
+
 Different conservation estimate
-       ↓
+
+       ↓
+
 Potentially different biological interpretation
+
 ```
 
 For this reason, accession-level provenance is treated as an integral component of the computational workflow.
@@ -270,7 +361,9 @@ The curated dataset is stored separately from the original source information.
 ### Analysis-ready sequence
 
 ```text
+
 data/processed/TP53_curated.fasta
+
 ```
 
 This file is used as the sequence-level input for the comparative workflow.
@@ -284,7 +377,9 @@ The processing stage establishes a stable analysis resource while retaining the 
 Species-level metadata are retained in:
 
 ```text
+
 data/raw/species_metadata.csv
+
 ```
 
 This resource supports interpretation of the comparative dataset and helps distinguish biological identity from sequence-level information.
@@ -310,19 +405,33 @@ These should not be conflated.
 The provenance chain is:
 
 ```text
+
 NCBI / reference database
-        ↓
+
+        ↓
+
 Accession record
-        ↓
+
+        ↓
+
 Retrieved protein sequence
-        ↓
+
+        ↓
+
 Curated sequence
-        ↓
+
+        ↓
+
 TP53_curated.fasta
-        ↓
+
+        ↓
+
 Multiple sequence alignment
-        ↓
+
+        ↓
+
 Residue-level conservation
+
 ```
 
 ---
@@ -334,7 +443,9 @@ Evolutionary conservation is integrated with human cancer mutation information.
 The repository contains the mutation-frequency resource:
 
 ```text
+
 data/raw/cbioportal_mutation_frequency_by_codon.csv
+
 ```
 
 This dataset provides the cancer-genomics layer of the analysis.
@@ -342,9 +453,13 @@ This dataset provides the cancer-genomics layer of the analysis.
 The purpose is to evaluate the relationship between:
 
 ```text
+
 Human cancer mutation recurrence
-              +
+
+              +
+
 Mammalian evolutionary conservation
+
 ```
 
 rather than deriving evolutionary conservation from the cancer dataset itself.
@@ -378,24 +493,43 @@ The analysis brings them together only after each has been independently represe
 The repository intentionally maintains separate data streams:
 
 ```text
-             MAMMALIAN EVOLUTION
-                    │
-                    ▼
-             TP53 sequences
-                    │
-                    ▼
-              Conservation
-                    │
-                    │
-                    ├───────────────┐
-                    │               │
-                    ▼               ▼
-             Human cancer      Structural
-              mutations         context
-                    │               │
-                    └───────┬───────┘
-                            ▼
-                    Integrated analysis
+
+             MAMMALIAN EVOLUTION
+
+                    │
+
+                    ▼
+
+             TP53 sequences
+
+                    │
+
+                    ▼
+
+              Conservation
+
+                    │
+
+                    │
+
+                    ├───────────────┐
+
+                    │               │
+
+                    ▼               ▼
+
+             Human cancer      Structural
+
+              mutations         context
+
+                    │               │
+
+                    └───────┬───────┘
+
+                            ▼
+
+                    Integrated analysis
+
 ```
 
 This architecture reduces the risk of circular interpretation.
@@ -409,7 +543,9 @@ The cancer mutation data are not used to define the evolutionary conservation si
 Structural context is provided through:
 
 ```text
+
 data/raw/1tup.cif
+
 ```
 
 This structural resource is used as supporting information for interpretation of TP53 residue positions and structural/functional classes.
@@ -423,7 +559,9 @@ Structural information is therefore treated as a contextual evidence layer rathe
 The processed structural classification is stored at:
 
 ```text
+
 data/processed/structural_class_summary.csv
+
 ```
 
 This resource supports interpretation of residue classes and their structural context.
@@ -437,13 +575,20 @@ The purpose is to ask whether conservation patterns correspond to known structur
 The human cancer hotspot analysis focuses on six recurrent TP53 residues:
 
 | Hotspot | Human TP53 residue |
+
 | ------: | :----------------: |
-|     175 |      **R175**      |
-|     245 |      **G245**      |
-|     248 |      **R248**      |
-|     249 |      **R249**      |
-|     273 |      **R273**      |
-|     282 |      **R282**      |
+
+|     175 |      **R175**      |
+
+|     245 |      **G245**      |
+
+|     248 |      **R248**      |
+
+|     249 |      **R249**      |
+
+|     273 |      **R273**      |
+
+|     282 |      **R282**      |
 
 These positions are defined from the human TP53 reference coordinate system.
 
@@ -460,21 +605,33 @@ A key methodological principle is:
 This means the workflow does not:
 
 ```text
+
 Find highly conserved residues
-        ↓
+
+        ↓
+
 Call them hotspots
+
 ```
 
 Instead, it follows:
 
 ```text
+
 Define biologically established human hotspots
-        ↓
+
+        ↓
+
 Map them to the mammalian alignment
-        ↓
+
+        ↓
+
 Measure their conservation
-        ↓
+
+        ↓
+
 Compare against controls
+
 ```
 
 This preserves the distinction between hypothesis definition and hypothesis testing.
@@ -490,9 +647,13 @@ The reason for this design is that the DNA-binding domain itself is evolutionari
 A comparison between:
 
 ```text
+
 Hotspots
-     vs
+
+     vs
+
 Every other residue in TP53
+
 ```
 
 could therefore mix hotspot-specific conservation with broad domain-level conservation.
@@ -506,7 +667,9 @@ The matched-control strategy provides a more biologically appropriate comparison
 The residue-level conservation dataset is stored at:
 
 ```text
+
 data/processed/residue_conservation.csv
+
 ```
 
 This dataset represents the processed conservation measurements derived from the mammalian TP53 alignment.
@@ -514,11 +677,17 @@ This dataset represents the processed conservation measurements derived from the
 It provides the analytical bridge between:
 
 ```text
+
 Sequence alignment
-       ↓
+
+       ↓
+
 Residue-level conservation
-       ↓
+
+       ↓
+
 Hotspot/control comparison
+
 ```
 
 ---
@@ -528,7 +697,9 @@ Hotspot/control comparison
 Permutation-based hotspot statistics are stored at:
 
 ```text
+
 data/processed/permutation_hotspot_statistics.csv
+
 ```
 
 The permutation analysis provides an empirical null-model framework for evaluating whether the observed hotspot conservation is greater than expected under matched random sampling.
@@ -536,7 +707,9 @@ The permutation analysis provides an empirical null-model framework for evaluati
 The corresponding result outputs are retained under:
 
 ```text
+
 results/statistics/
+
 ```
 
 ---
@@ -548,9 +721,13 @@ Phylogenetic analysis is performed on the mammalian TP53 sequence dataset.
 The principal phylogenetic output files are:
 
 ```text
+
 results/phylogeny/
+
 ├── TP53_mammals.iqtree
+
 └── TP53_mammals.treefile
+
 ```
 
 The phylogenetic analysis provides evolutionary context for the sequence comparisons.
@@ -568,11 +745,17 @@ The study therefore evaluates alternative taxonomic sampling strategies.
 The sensitivity framework includes:
 
 ```text
-1. Full mammalian dataset
-2. Excluding primates
-3. Excluding rodents
-4. Excluding primates and rodents
-5. One representative species per mammalian order
+
+1\. Full mammalian dataset
+
+2\. Excluding primates
+
+3\. Excluding rodents
+
+4\. Excluding primates and rodents
+
+5\. One representative species per mammalian order
+
 ```
 
 The purpose is to determine whether the principal conservation pattern remains directionally stable when influential taxonomic groups are removed or down-sampled.
@@ -592,56 +775,100 @@ and
 The complete transformation pathway is:
 
 ```text
-                PUBLIC SOURCES
-                     │
-        ┌────────────┼────────────┐
-        │            │            │
-        ▼            ▼            ▼
-      NCBI        UniProt     cBioPortal
-        │            │            │
-        ▼            ▼            ▼
- Mammalian       Human TP53    Cancer
- sequences       reference    mutations
-        │            │            │
-        └────────────┼────────────┘
-                     ▼
-               DATA CURATION
-                     │
-                     ▼
-           ANALYSIS-READY DATA
-                     │
-       ┌─────────────┼─────────────┐
-       │             │             │
-       ▼             ▼             ▼
- Conservation     Mutation      Phylogeny
-       │             │             │
-       └─────────────┼─────────────┘
-                     ▼
-              Statistical analysis
-                     │
-                     ▼
-               Final results
+
+                PUBLIC SOURCES
+
+                     │
+
+        ┌────────────┼────────────┐
+
+        │            │            │
+
+        ▼            ▼            ▼
+
+      NCBI        UniProt     cBioPortal
+
+        │            │            │
+
+        ▼            ▼            ▼
+
+ Mammalian       Human TP53    Cancer
+
+ sequences       reference    mutations
+
+        │            │            │
+
+        └────────────┼────────────┘
+
+                     ▼
+
+               DATA CURATION
+
+                     │
+
+                     ▼
+
+           ANALYSIS-READY DATA
+
+                     │
+
+       ┌─────────────┼─────────────┐
+
+       │             │             │
+
+       ▼             ▼             ▼
+
+ Conservation     Mutation      Phylogeny
+
+       │             │             │
+
+       └─────────────┼─────────────┘
+
+                     ▼
+
+              Statistical analysis
+
+                     │
+
+                     ▼
+
+               Final results
+
 ```
 
 ---
 
 # 📁 27. Provenance-to-Repository Map
 
-| Data / Resource           | Repository location                                   | Role                                 |
+| Data / Resource           | Repository location                                   | Role                                 |
+
 | ------------------------- | ----------------------------------------------------- | ------------------------------------ |
-| Human TP53 reference      | UniProt P04637                                        | Reference coordinate system          |
-| Mammalian TP53 sequences  | `data/processed/TP53_curated.fasta`                   | Comparative sequence dataset         |
-| Sequence accession audit  | `data/processed/TP53_sequence_accession_audit.csv`    | Sequence provenance                  |
-| Species metadata          | `data/raw/species_metadata.csv`                       | Taxonomic metadata                   |
-| Cancer mutation data      | `data/raw/cbioportal_mutation_frequency_by_codon.csv` | Mutation recurrence                  |
-| Structural reference      | `data/raw/1tup.cif`                                   | Structural context                   |
-| Structural classification | `data/processed/structural_class_summary.csv`         | Functional/structural interpretation |
-| Conservation data         | `data/processed/residue_conservation.csv`             | Residue-level conservation           |
-| Permutation statistics    | `data/processed/permutation_hotspot_statistics.csv`   | Null-model analysis                  |
-| Hotspot analysis          | `results/hotspot_analysis/`                           | Hotspot-specific outputs             |
-| Phylogenetic outputs      | `results/phylogeny/`                                  | Evolutionary relationships           |
-| Main analysis script      | `scripts/`                                            | Computational implementation         |
-| Analysis notebook         | `notebooks/`                                          | Interactive analysis                 |
+
+| Human TP53 reference      | UniProt P04637                                        | Reference coordinate system          |
+
+| Mammalian TP53 sequences  | `data/processed/TP53_curated.fasta`                   | Comparative sequence dataset         |
+
+| Sequence accession audit  | `data/processed/TP53_sequence_accession_audit.csv`    | Sequence provenance                  |
+
+| Species metadata          | `data/raw/species_metadata.csv`                       | Taxonomic metadata                   |
+
+| Cancer mutation data      | `data/raw/cbioportal_mutation_frequency_by_codon.csv` | Mutation recurrence                  |
+
+| Structural reference      | `data/raw/1tup.cif`                                   | Structural context                   |
+
+| Structural classification | `data/processed/structural_class_summary.csv`         | Functional/structural interpretation |
+
+| Conservation data         | `data/processed/residue_conservation.csv`             | Residue-level conservation           |
+
+| Permutation statistics    | `data/processed/permutation_hotspot_statistics.csv`   | Null-model analysis                  |
+
+| Hotspot analysis          | `results/hotspot_analysis/`                           | Hotspot-specific outputs             |
+
+| Phylogenetic outputs      | `results/phylogeny/`                                  | Evolutionary relationships           |
+
+| Main analysis script      | `scripts/`                                            | Computational implementation         |
+
+| Analysis notebook         | `notebooks/`                                          | Interactive analysis                 |
 
 ---
 
@@ -652,19 +879,33 @@ A critical component of the study is the maintenance of a consistent coordinate 
 The coordinate hierarchy is:
 
 ```text
+
 Human TP53 residue number
-            │
-            ▼
+
+            │
+
+            ▼
+
 Multiple sequence alignment
-            │
-            ▼
+
+            │
+
+            ▼
+
 Homologous mammalian position
-            │
-            ▼
+
+            │
+
+            ▼
+
 Conservation measurement
-            │
-            ▼
+
+            │
+
+            ▼
+
 Hotspot / control classification
+
 ```
 
 This prevents the common error of treating an alignment column as automatically equivalent to a biological residue number.
@@ -682,13 +923,21 @@ For this reason, the repository preserves the actual analysis resources used in 
 The combination of:
 
 ```text
+
 Source database
+
 +
+
 Accession
+
 +
+
 Stored analysis resource
+
 +
+
 Processing documentation
+
 ```
 
 provides a more stable provenance record.
@@ -701,23 +950,23 @@ This repository aims to make the analytical inputs inspectable and traceable.
 
 However, reproducibility has several levels:
 
-### Level 1 — Data reproducibility
+### Level 1 --- Data reproducibility
 
 Can another researcher identify the biological records used?
 
-### Level 2 — Computational reproducibility
+### Level 2 --- Computational reproducibility
 
 Can another researcher inspect the code and analytical transformations?
 
-### Level 3 — Result reproducibility
+### Level 3 --- Result reproducibility
 
 Can the reported outputs be regenerated from the documented inputs?
 
-### Level 4 — Biological reproducibility
+### Level 4 --- Biological reproducibility
 
 Would an independent biological experiment reproduce the observed biological phenomenon?
 
-This repository primarily addresses **Levels 1–3**.
+This repository primarily addresses **Levels 1--3**.
 
 It does not claim experimental reproducibility of the biological findings.
 
@@ -758,55 +1007,73 @@ A researcher inspecting this repository can independently examine:
 ### 🧬 Sequence inputs
 
 ```text
+
 data/processed/TP53_curated.fasta
+
 ```
 
 ### 🔎 Accession provenance
 
 ```text
+
 data/processed/TP53_sequence_accession_audit.csv
+
 ```
 
 ### 🐭 Species metadata
 
 ```text
+
 data/raw/species_metadata.csv
+
 ```
 
 ### 🧪 Cancer mutation resource
 
 ```text
+
 data/raw/cbioportal_mutation_frequency_by_codon.csv
+
 ```
 
 ### 🧩 Structural reference
 
 ```text
+
 data/raw/1tup.cif
+
 ```
 
 ### 📊 Conservation measurements
 
 ```text
+
 data/processed/residue_conservation.csv
+
 ```
 
 ### 🔄 Permutation analysis
 
 ```text
+
 data/processed/permutation_hotspot_statistics.csv
+
 ```
 
 ### 🌳 Phylogenetic outputs
 
 ```text
+
 results/phylogeny/
+
 ```
 
 ### 💻 Computational implementation
 
 ```text
+
 scripts/
+
 ```
 
 ---
@@ -816,39 +1083,73 @@ scripts/
 For a researcher reviewing this project:
 
 ```text
+
 START
-  │
-  ▼
+
+  │
+
+  ▼
+
 Human TP53 reference
-  │
-  ▼
+
+  │
+
+  ▼
+
 56 mammalian sequences
-  │
-  ▼
+
+  │
+
+  ▼
+
 Accession audit
-  │
-  ▼
+
+  │
+
+  ▼
+
 Curated FASTA
-  │
-  ▼
+
+  │
+
+  ▼
+
 Multiple sequence alignment
-  │
-  ▼
+
+  │
+
+  ▼
+
 Residue conservation
-  │
-  ├───────────────┐
-  ▼               ▼
-Hotspots       Mutation data
-  │               │
-  └───────┬───────┘
-          ▼
-     Statistics
-          │
-          ▼
-      Phylogeny
-          │
-          ▼
-     Interpretation
+
+  │
+
+  ├───────────────┐
+
+  ▼               ▼
+
+Hotspots       Mutation data
+
+  │               │
+
+  └───────┬───────┘
+
+          ▼
+
+     Statistics
+
+          │
+
+          ▼
+
+      Phylogeny
+
+          │
+
+          ▼
+
+     Interpretation
+
 ```
 
 This provides a direct path from biological source material to the scientific interpretation.
@@ -884,31 +1185,53 @@ The guiding principle of this project is:
 In practical terms:
 
 ```text
+
 No anonymous sequence
-        ↓
+
+        ↓
+
 No undocumented transformation
-        ↓
+
+        ↓
+
 No unexplained dataset
-        ↓
+
+        ↓
+
 No untraceable result
+
 ```
 
 Instead:
 
 ```text
+
 Source
-  ↓
+
+  ↓
+
 Accession
-  ↓
+
+  ↓
+
 Curated input
-  ↓
+
+  ↓
+
 Analysis
-  ↓
+
+  ↓
+
 Output
-  ↓
+
+  ↓
+
 Figure
-  ↓
+
+  ↓
+
 Interpretation
+
 ```
 
 ---
@@ -972,34 +1295,65 @@ Continue the computational audit through:
 The final dataset and analysis can be represented as:
 
 ```text
-                 PUBLIC BIOLOGICAL RESOURCES
-                              │
-            ┌─────────────────┼─────────────────┐
-            │                 │                 │
-            ▼                 ▼                 ▼
-          NCBI             UniProt         cBioPortal
-            │                 │                 │
-            ▼                 ▼                 ▼
-      Mammalian TP53      Human TP53       Cancer mutation
-         records            reference          data
-            │                 │                 │
-            └─────────────────┼─────────────────┘
-                              ▼
-                       CURATED DATASETS
-                              │
-                 ┌────────────┼────────────┐
-                 │            │            │
-                 ▼            ▼            ▼
-             Sequences    Mutations    Structure
-                 │            │            │
-                 └────────────┼────────────┘
-                              ▼
-                       COMPUTATIONAL
-                          ANALYSIS
-                              │
-                              ▼
-                         STATISTICS
-                              │
-                              ▼
-                       INTERPRETATION
+
+                 PUBLIC BIOLOGICAL RESOURCES
+
+                              │
+
+            ┌─────────────────┼─────────────────┐
+
+            │                 │                 │
+
+            ▼                 ▼                 ▼
+
+          NCBI             UniProt         cBioPortal
+
+            │                 │                 │
+
+            ▼                 ▼                 ▼
+
+      Mammalian TP53      Human TP53       Cancer mutation
+
+         records            reference          data
+
+            │                 │                 │
+
+            └─────────────────┼─────────────────┘
+
+                              ▼
+
+                       CURATED DATASETS
+
+                              │
+
+                 ┌────────────┼────────────┐
+
+                 │            │            │
+
+                 ▼            ▼            ▼
+
+             Sequences    Mutations    Structure
+
+                 │            │            │
+
+                 └────────────┼────────────┘
+
+                              ▼
+
+                       COMPUTATIONAL
+
+                          ANALYSIS
+
+                              │
+
+                              ▼
+
+                         STATISTICS
+
+                              │
+
+                              ▼
+
+                       INTERPRETATION
+
 ```
