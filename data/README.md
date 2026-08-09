@@ -1,27 +1,26 @@
 # 🧬 Data
 
-> **Curated biological inputs and analysis-ready datasets supporting the TP53 evolutionary-conservation study across mammals.**
+> **Curated biological datasets supporting the comparative evolutionary analysis of human TP53 cancer-associated hotspots across mammals.**
 
-This directory contains the data resources used to connect **human TP53 cancer-associated hotspots** with **mammalian evolutionary conservation, mutation recurrence, and structural context**.
+This directory contains the data resources used to move from **public biological records → curated analysis-ready datasets → evolutionary and statistical analysis**.
 
-The data are separated into two layers:
+---
+
+## 📂 Directory Structure
 
 ```text
-                    DATA
-                     │
-          ┌──────────┴──────────┐
-          │                     │
-          ▼                     ▼
-       🗃️ RAW              🧪 PROCESSED
-          │                     │
-          │                     │
- Original / source-level     Curated and
- biological resources       analysis-ready data
-          │                     │
-          └──────────┬──────────┘
-                     ▼
-              Computational
-                 analysis
-                     │
-                     ▼
-                 Results
+data/
+│
+├── raw/
+│   ├── 1tup.cif
+│   ├── TP53_curated_v0.fasta
+│   ├── cbioportal_mutation_frequency_by_codon.csv
+│   ├── species_metadata.csv
+│   ├── REFERENCES_v1.md
+│   ├── REFERENCE_TARGETS_v2.md
+│   └── README.md
+│
+├── processed/
+│   └── README.md
+│
+└── README.md
