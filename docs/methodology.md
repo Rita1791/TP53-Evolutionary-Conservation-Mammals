@@ -1,66 +1,51 @@
 # 🔬 Methodology
 
-> **A reproducible computational framework for evaluating evolutionary conservation and functional constraint at recurrent human TP53 cancer mutation hotspots across mammalian species.**
+> **A reproducible comparative-bioinformatics framework for evaluating evolutionary conservation at recurrent human TP53 cancer-associated mutation hotspots across mammals.**
 
 ---
 
-## 🧭 1. Methodological Overview
+# 🧭 1. Research Question
 
-This repository implements a comparative evolutionary bioinformatics workflow designed to investigate whether recurrent human TP53 cancer mutation hotspots occur at residues that are unusually constrained across mammalian evolution.
+The study investigates the following central question:
 
-The study integrates four complementary evidence layers:
+> **Do recurrent human TP53 cancer-associated mutation hotspots occur at residues that are evolutionarily constrained across mammals?**
 
-1. 🧬 **Mammalian TP53 sequence conservation**
-2. 🎯 **Recurrent human TP53 cancer mutation positions**
-3. 📊 **Statistical comparison of hotspot and matched control residues**
-4. 🌳 **Phylogenetic and structural context**
-
-The central analytical question is:
-
-> **Do recurrent human TP53 cancer mutation hotspots occupy evolutionarily constrained residues across mammals?**
-
-Rather than treating mutation recurrence and evolutionary conservation as independent observations, the workflow places both on the same residue-level coordinate system.
+The analysis integrates evolutionary sequence information with human cancer mutation positions to evaluate whether recurrently mutated TP53 residues occupy regions of distinctive evolutionary conservation.
 
 ---
 
 # 🧠 2. Conceptual Framework
 
-The complete analytical logic can be summarized as:
+The complete analytical logic is:
 
 ```text
-                    HUMAN TP53
-                        │
-                        ▼
-             Recurrent cancer hotspots
-                        │
-             ┌──────────┴──────────┐
-             │                     │
-             ▼                     ▼
-      Mammalian TP53          Human cancer
-        sequences             mutation data
-             │                     │
-             ▼                     ▼
-       Sequence curation      Mutation mapping
-             │                     │
-             └──────────┬──────────┘
-                        ▼
-              Multiple sequence
-                   alignment
-                        │
-                        ▼
-              Residue-level mapping
-                        │
-             ┌──────────┼──────────┐
-             │          │          │
-             ▼          ▼          ▼
-        Conservation  Statistics  Phylogeny
-             │          │          │
-             └──────────┼──────────┘
-                        ▼
-               Structural context
-                        │
-                        ▼
-             Integrated interpretation
-                        │
-                        ▼
-              Evolutionary constraint
+Human TP53
+    │
+    ▼
+Recurrent cancer-associated residues
+    │
+    ▼
+Mammalian TP53 homologues
+    │
+    ▼
+Multiple sequence alignment
+    │
+    ▼
+Residue-level conservation
+    │
+    ├───────────────┐
+    ▼               ▼
+Hotspot residues   Matched controls
+    │               │
+    └───────┬───────┘
+            ▼
+     Statistical analysis
+            │
+            ▼
+    Phylogenetic sensitivity
+            │
+            ▼
+    Structural interpretation
+            │
+            ▼
+    Evolutionary hypothesis
