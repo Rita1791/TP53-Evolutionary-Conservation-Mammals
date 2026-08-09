@@ -1,5 +1,12 @@
-biopython
-numpy
-scipy
-matplotlib
-pandas
+# Core scientific Python
+numpy>=1.26
+pandas>=2.2
+scipy>=1.12
+matplotlib>=3.8
+
+# Bioinformatics
+biopython>=1.83
+
+# Notebook / interactive analysis
+jupyterlab>=4.0
+ipykernel>=6.29
