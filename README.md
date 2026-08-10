@@ -51,6 +51,19 @@ Instead, the study asks whether **mutation recurrence and evolutionary constrain
 
 ---
 
+## For PIs / Reviewers
+
+Start here if you are reviewing this repository for academic, PhD, or computational biology evaluation:
+
+1. [`docs/reviewer_summary.md`](docs/reviewer_summary.md)
+2. [`docs/reviewer_quickstart.md`](docs/reviewer_quickstart.md)
+3. [`docs/statistical_analysis.md`](docs/statistical_analysis.md)
+4. [`docs/provenance.md`](docs/provenance.md)
+5. [`docs/interpretation_and_limitations.md`](docs/interpretation_and_limitations.md)
+6. [`docs/result_interpretation_for_non_specialists.md`](docs/result_interpretation_for_non_specialists.md)
+
+---
+
 # 🧬 Research Framework
 
 ```text
