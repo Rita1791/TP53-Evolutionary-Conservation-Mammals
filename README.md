@@ -1,29 +1,58 @@
+<a id="readme-top"></a>
+
 <div align="center">
 
-🧬 TP53: The Residues Evolution Refused to Change
-
-56 mammals · 393 amino acids · 6 cancer hotspots · 0 substitutions at those sites
-
 <p>
-  A comparative-genomics investigation of whether recurrent human cancer mutations<br>
-  strike the same TP53 residues that mammalian evolution has kept under exceptional constraint.
+  <img src="https://img.shields.io/badge/TP53-EVOLUTIONARY_CONSERVATION-7C3AED?style=for-the-badge&labelColor=111827" alt="TP53 evolutionary conservation">
 </p>
 
+🧬 The Residues Evolution Refused to Change
 
+56 mammals · 393 amino acids · 6 cancer hotspots · 0 substitutions
 
-<br>
+<p>
+  A comparative-genomics investigation into a biological contradiction:<br>
+  <strong>cancer repeatedly changes the same TP53 residues that evolution preserved.</strong>
+</p>
 
-Evolution said “do not change.”  Cancer changed them anyway.
+<p>
+  <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals"><img src="https://img.shields.io/badge/GITHUB-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open GitHub repository"></a>
+  <a href="https://in.linkedin.com/in/ritika-rawat-551107219"><img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
+  <a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Evolutionary%20Conservation%20Research"><img src="https://img.shields.io/badge/EMAIL-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email the corresponding author"></a>
+  <a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><img src="https://img.shields.io/badge/RESEARCHGATE-Profile-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="View ResearchGate profile"></a>
+</p>
 
-<sub>Scroll for the evidence, or choose a route:</sub>
+<p>
+  <a href="https://doi.org/10.21203/rs.3.rs-9299199/v1"><img src="https://img.shields.io/badge/DOI-Read_Preprint-7C3AED?style=flat-square&logo=doi&logoColor=white" alt="Read the preprint"></a>
+  <a href="data/processed/TP53_sequence_accession_audit.csv"><img src="https://img.shields.io/badge/DATA-56_Sequences-0F766E?style=flat-square&logo=databricks&logoColor=white" alt="Inspect the sequence audit"></a>
+  <a href="CITATION.cff"><img src="https://img.shields.io/badge/CITE-CITATION.cff-1D4ED8?style=flat-square&logo=zotero&logoColor=white" alt="Cite this repository"></a>
+  <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals/issues/new"><img src="https://img.shields.io/badge/QUESTION-Open_an_Issue-2563EB?style=flat-square&logo=github&logoColor=white" alt="Open a GitHub issue"></a>
+</p>
 
-See the finding · Meet the hotspots · Explore the evidence · Run the analysis · Audit the study
+Evolution said “do not change.” Cancer changed them anyway.
 
 </div>
 
+<table>
+  <tr>
+    <td align="center" width="25%"><a href="#finding"><strong>⚡ See the answer</strong></a><br><sub>60-second result</sub></td>
+    <td align="center" width="25%"><a href="#hotspots"><strong>🎯 Meet the six</strong></a><br><sub>Hotspot evidence</sub></td>
+    <td align="center" width="25%"><a href="#evidence"><strong>📊 Explore figures</strong></a><br><sub>Four evidence lenses</sub></td>
+    <td align="center" width="25%"><a href="#run"><strong>💻 Inspect the code</strong></a><br><sub>Run and repository map</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="#versions"><strong>🧾 Check versions</strong></a><br><sub>10 vs 56 sequences</sub></td>
+    <td align="center"><a href="#boundaries"><strong>🛡️ Audit claims</strong></a><br><sub>Limits and gaps</sub></td>
+    <td align="center"><a href="#citation"><strong>📚 Cite the study</strong></a><br><sub>DOI and metadata</sub></td>
+    <td align="center"><a href="#contact"><strong>🤝 Collaborate</strong></a><br><sub>Email and profiles</sub></td>
+  </tr>
+</table>
+
 [!IMPORTANT]Version rule: this repository contains the expanded 56-sequence MAFFT analysis. The linked Research Square preprint is an earlier 10-species snapshot. They belong to the same research programme, but their sample sizes and statistics are not interchangeable.
 
-The biological mystery
+<a id="story"></a>
+
+01 · 🧩 The biological mystery
 
 TP53 is damaged in a vast range of human cancers, but the mutations are not spread evenly across the protein. A small group of codons is hit again and again.
 
@@ -51,7 +80,9 @@ Mutation recurrence and conservation show a positive reported association.
 
 R249 is completely conserved but ranks only 19th by mutation count.
 
-The finding in one screen
+<a id="finding"></a>
+
+02 · ⚡ The finding in one screen
 
 <table>
   <tr>
@@ -91,7 +122,9 @@ This demonstrates evolutionary constraint. It does not by itself establish why t
 
 </details>
 
-Meet the six
+<a id="hotspots"></a>
+
+03 · 🎯 Meet the six
 
 <table>
   <tr>
@@ -147,7 +180,7 @@ Meet the six
 
 <sub>Committed sources: residue_conservation.csv and cbioportal_mutation_frequency_by_codon.csv.</sub>
 
-The R249 plot twist
+🧨 The R249 plot twist
 
 flowchart LR
     A["R249 across 56 mammals"] --> B["Conservation = 1.000"]
@@ -161,7 +194,9 @@ That gap points to biology beyond conservation: mutational exposure, nucleotide 
 
 [!TIP]The strongest insight is not that conservation and cancer recurrence match. It is that they overlap strongly without being identical.
 
-From sequence to biological argument
+<a id="workflow"></a>
+
+04 · 🔬 From sequence to biological argument
 
 flowchart TB
     A["56 curated mammalian TP53 proteins"] --> B["MAFFT alignment"]
@@ -200,7 +235,9 @@ Add phylogenetic and structural context, then interpret the result within explic
 
 </details>
 
-Choose an evidence lens
+<a id="evidence"></a>
+
+05 · 📊 Choose an evidence lens
 
 <details open>
 <summary><strong>01 — Constraint: are hotspots exceptional inside the DNA-binding domain?</strong></summary>
@@ -252,7 +289,7 @@ The hotspot set combines DNA-contact residues with structural-core residues. Thi
 
 </details>
 
-Evidence, not overclaiming
+06 · 🧠 Evidence, not overclaiming
 
 Evidence level
 
@@ -278,7 +315,9 @@ Not established
 
 Causal mechanism, clinical risk, prognosis, treatment response or mutation-specific pathogenicity.
 
-Run & inspect
+<a id="run"></a>
+
+07 · 💻 Run & inspect
 
 Clone
 
@@ -328,7 +367,7 @@ The module runs independently, but its current metric selection does not reprodu
 
 [!NOTE]This is currently an evidence-inspection workflow, not a clean one-command rebuild. The committed tables and figures are usable; the end-to-end script and tests still require schema reconciliation.
 
-Repository map
+08 · 🗺️ Repository map
 
 Area
 
@@ -366,7 +405,7 @@ publication/
 
 Manuscript source and submitted research material
 
-Pick your entry point
+🚪 Pick your entry point
 
 I want to…
 
@@ -396,7 +435,9 @@ Separate the 10-species and 56-sequence analyses
 
 analysis_versions.md
 
-Scientific boundaries
+<a id="boundaries"></a>
+
+09 · 🛡️ Scientific boundaries
 
 <details>
 <summary><strong>What is solid, what is incomplete, and what must not be claimed</strong></summary>
@@ -439,7 +480,9 @@ For the full audit, read docs/reproducibility.md and docs/interpretation_and_lim
 
 </details>
 
-Analysis versions
+<a id="versions"></a>
+
+10 · 🧾 Analysis versions
 
 Evidence snapshot
 
@@ -461,7 +504,7 @@ Committed tables, figures and sensitivity results
 
 Mixing these versions would be scientifically wrong. See docs/analysis_versions.md before reporting numerical results.
 
-What comes next
+11 · 🚀 What comes next
 
 Lock a versioned environment and all external tool versions.
 
@@ -479,13 +522,15 @@ Extend phylogeny-aware modelling beyond subset removal.
 
 Test the evolutionary hypotheses with structural or experimental evidence.
 
-Cite this work
+<a id="citation"></a>
+
+12 · 📚 Cite this work
 
 Rawat, R. R., Nadar, S., & Uppal, G. K. (2026).Evolutionary Conservation and Functional Constraint of TP53 Mutation Hotspots Across Mammalian Species.Research Square. https://doi.org/10.21203/rs.3.rs-9299199/v1
 
 Repository citation metadata is provided in CITATION.cff. Before release, replace or remove the placeholder ORCID currently present in that file.
 
-Research team
+13 · 👥 Research team
 
 Researcher
 
@@ -503,6 +548,39 @@ Gursimran Kaur Uppal
 
 Co-author of the associated research
 
+<a id="contact"></a>
+
+14 · 🤝 Contact & collaboration
+
+Interested in comparative genomics, evolutionary oncology, TP53 biology, reproducible bioinformatics or research collaboration? Use the route that matches your purpose:
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Research%20Collaboration"><strong>✉️ Email</strong></a><br>
+      <sub>Research and collaboration</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://in.linkedin.com/in/ritika-rawat-551107219"><strong>💼 LinkedIn</strong></a><br>
+      <sub>Professional connection</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><strong>🔬 ResearchGate</strong></a><br>
+      <sub>Research profile</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals/issues/new"><strong>💬 GitHub issue</strong></a><br>
+      <sub>Technical questions</sub>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+
+<a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Evolutionary%20Conservation%20Research"><img src="https://img.shields.io/badge/EMAIL-Ritika_Rawat-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritika Rawat"></a><a href="https://in.linkedin.com/in/ritika-rawat-551107219"><img src="https://img.shields.io/badge/LINKEDIN-Ritika_Rawat-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Ritika Rawat on LinkedIn"></a><a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><img src="https://img.shields.io/badge/RESEARCHGATE-Follow_Research-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="Follow research on ResearchGate"></a>
+
+</div>
+
 <div align="center">
 
 The six hotspots were not the end of the analysis.
@@ -511,7 +589,7 @@ They were the start of a better question.
 
 Why do equally conserved residues recur so differently in cancer?
 
-GitHub · LinkedIn · ResearchGate
+⬆ Back to top · 📖 Read the preprint · ⭐ View the repository
 
 <sub>MIT licensed · Computational research only · Not validated for clinical use</sub>
 
