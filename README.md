@@ -1,596 +1,542 @@
-<a id="readme-top"></a>
+<a id="top"></a>
 
 <div align="center">
 
-<p>
-  <img src="https://img.shields.io/badge/TP53-EVOLUTIONARY_CONSERVATION-7C3AED?style=for-the-badge&labelColor=111827" alt="TP53 evolutionary conservation">
-</p>
+<a href="figures/main/Figure_5_TP53_Domain_Lollipop_Map.png">
+  <img src="figures/main/Figure_5_TP53_Domain_Lollipop_Map.png" alt="TP53 recurrent mutation map across protein domains" width="920">
+</a>
 
-🧬 The Residues Evolution Refused to Change
+TP53 Evolutionary Conservation Across Mammals
 
-56 mammals · 393 amino acids · 6 cancer hotspots · 0 substitutions
+Why does cancer repeatedly alter residues that mammalian evolution refused to change?
 
-<p>
-  A comparative-genomics investigation into a biological contradiction:<br>
-  <strong>cancer repeatedly changes the same TP53 residues that evolution preserved.</strong>
-</p>
+Ritika Rajendra Rawat · Sermarani Nadar · Gursimran Kaur Uppal · 2026
 
-<p>
-  <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals"><img src="https://img.shields.io/badge/GITHUB-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open GitHub repository"></a>
-  <a href="https://in.linkedin.com/in/ritika-rawat-551107219"><img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-  <a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Evolutionary%20Conservation%20Research"><img src="https://img.shields.io/badge/EMAIL-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email the corresponding author"></a>
-  <a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><img src="https://img.shields.io/badge/RESEARCHGATE-Profile-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="View ResearchGate profile"></a>
-</p>
 
-<p>
-  <a href="https://doi.org/10.21203/rs.3.rs-9299199/v1"><img src="https://img.shields.io/badge/DOI-Read_Preprint-7C3AED?style=flat-square&logo=doi&logoColor=white" alt="Read the preprint"></a>
-  <a href="data/processed/TP53_sequence_accession_audit.csv"><img src="https://img.shields.io/badge/DATA-56_Sequences-0F766E?style=flat-square&logo=databricks&logoColor=white" alt="Inspect the sequence audit"></a>
-  <a href="CITATION.cff"><img src="https://img.shields.io/badge/CITE-CITATION.cff-1D4ED8?style=flat-square&logo=zotero&logoColor=white" alt="Cite this repository"></a>
-  <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals/issues/new"><img src="https://img.shields.io/badge/QUESTION-Open_an_Issue-2563EB?style=flat-square&logo=github&logoColor=white" alt="Open a GitHub issue"></a>
-</p>
 
-Evolution said “do not change.” Cancer changed them anyway.
+
+
+Results · Research map · Figures · Methods · Code & data · Citation · Contact
 
 </div>
 
+TL;DR
+
+🧬 This study maps recurrent human TP53 cancer hotspots onto an alignment of 56 mammalian TP53 protein sequences. All six canonical hotspots—R175, G245, R248, R249, R273 and R282—are invariant in the committed repository analysis. They are more conserved than non-hotspot residues from the same DNA-binding domain, and cancer mutation recurrence is positively associated with mammalian conservation across the protein. The important exception is R249: evolution preserved it completely, but it ranks only nineteenth by pan-cancer mutation count. That mismatch is the central biological insight—conservation identifies constraint; it does not fully determine cancer recurrence.
+
+Highlights
+
+🎯 Six out of six canonical hotspots are invariant across the committed 56-sequence mammalian dataset.
+
+🧪 Domain-matched testing avoids the weak comparison of hotspots against the entire, unevenly conserved protein.
+
+📊 Canonical hotspots have mean conservation 1.000 versus 0.934 for DNA-binding-domain controls; one-sided Mann–Whitney P = 0.0156.
+
+🎲 The committed matched permutation test reports empirical one-sided P = 0.02359.
+
+📈 Across 393 human-coordinate residues, mutation count and conservation show a reported Spearman association of ρ = 0.430; P = 4.49 × 10⁻¹⁹.
+
+🌳 The hotspot–control contrast remains positive after lineage-removal and order-aware sensitivity analyses.
+
+⚠️ R249 breaks the simplistic story: conservation is not a codon-level model of mutation exposure, tumour selection or cancer frequency.
+
+Contents
+
+Headline result
+
+Research map
+
+The six hotspots
+
+The R249 exception
+
+Visual evidence
+
+Methods in one view
+
+Inspect the analysis
+
+Evidence boundaries
+
+Analysis versions
+
+Publication and citation
+
+Research team
+
+Contact
+
+<a id="headline-result"></a>
+
+Headline result
+
 <table>
   <tr>
-    <td align="center" width="25%"><a href="#finding"><strong>⚡ See the answer</strong></a><br><sub>60-second result</sub></td>
-    <td align="center" width="25%"><a href="#hotspots"><strong>🎯 Meet the six</strong></a><br><sub>Hotspot evidence</sub></td>
-    <td align="center" width="25%"><a href="#evidence"><strong>📊 Explore figures</strong></a><br><sub>Four evidence lenses</sub></td>
-    <td align="center" width="25%"><a href="#run"><strong>💻 Inspect the code</strong></a><br><sub>Run and repository map</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="#versions"><strong>🧾 Check versions</strong></a><br><sub>10 vs 56 sequences</sub></td>
-    <td align="center"><a href="#boundaries"><strong>🛡️ Audit claims</strong></a><br><sub>Limits and gaps</sub></td>
-    <td align="center"><a href="#citation"><strong>📚 Cite the study</strong></a><br><sub>DOI and metadata</sub></td>
-    <td align="center"><a href="#contact"><strong>🤝 Collaborate</strong></a><br><sub>Email and profiles</sub></td>
+    <td align="center" width="25%"><h2>56</h2><sub>curated mammalian<br>TP53 sequences</sub></td>
+    <td align="center" width="25%"><h2>6 / 6</h2><sub>canonical hotspots<br>fully conserved</sub></td>
+    <td align="center" width="25%"><h2>0.02359</h2><sub>empirical one-sided<br>permutation P</sub></td>
+    <td align="center" width="25%"><h2>0.430</h2><sub>reported Spearman ρ<br>across 393 residues</sub></td>
   </tr>
 </table>
 
-[!IMPORTANT]Version rule: this repository contains the expanded 56-sequence MAFFT analysis. The linked Research Square preprint is an earlier 10-species snapshot. They belong to the same research programme, but their sample sizes and statistics are not interchangeable.
+<a href="figures/main/Figure_1_Conservation_Profile.png">
+  <img src="figures/main/Figure_1_Conservation_Profile.png" alt="Residue-level mammalian TP53 conservation profile" width="100%">
+</a>
 
-<a id="story"></a>
+<p align="center"><sub><strong>Click the figure to open it at full resolution.</strong> The six canonical hotspots reach the maximum conservation value in the committed analysis.</sub></p>
 
-01 · 🧩 The biological mystery
+Interpretation: the canonical hotspot residues show unusually strong evolutionary constraint. This supports functional sensitivity at those positions; it does not prove why a tumour acquires a particular TP53 mutation.
 
-TP53 is damaged in a vast range of human cancers, but the mutations are not spread evenly across the protein. A small group of codons is hit again and again.
+<a id="research-map"></a>
 
-Mammalian evolution offers a second, independent record: millions of years of sequence change. If the same hotspot residues remain unchanged across divergent mammals, that is evidence that evolution has strongly constrained them.
+Research map
 
-This project therefore asks one precise question:
+#
 
-Are recurrent human TP53 cancer hotspots unusually conserved across mammals—and does conservation explain how often each hotspot appears in cancer?
+Question
 
-The answer has two layers:
+What was tested
 
-What the data say clearly
+Open the evidence
 
-Where the story becomes interesting
+1  🧬
 
-All six canonical hotspots are invariant in the committed 56-sequence table.
+Where is TP53 conserved?
 
-Their cancer recurrence is not equally high.
+Residue-level conservation, entropy and gaps across 56 mammalian sequences mapped to the 393-aa human reference.
 
-Hotspots are more conserved than the reported DNA-binding-domain control background.
+Conservation profile · Residue table
 
-Conservation alone cannot explain the ranking of every hotspot.
+2  🎯
 
-Mutation recurrence and conservation show a positive reported association.
+Are cancer hotspots exceptional?
 
-R249 is completely conserved but ranks only 19th by mutation count.
+Six canonical hotspots versus non-hotspot residues from the same DNA-binding domain.
 
-<a id="finding"></a>
+Hotspot comparison · Statistics
 
-02 · ⚡ The finding in one screen
+3  🌳
+
+Could taxonomic sampling drive the result?
+
+Full dataset, lineage-removal subsets and one-species-per-order sensitivity analysis.
+
+Sensitivity figure · Phylogeny
+
+4  📈
+
+Does conservation track cancer recurrence?
+
+Codon-level TCGA PanCancer/cBioPortal mutation counts integrated with mammalian conservation.
+
+Correlation figure · Mutation data
+
+5  🧩
+
+Where do recurrent residues sit in the protein?
+
+DNA-contact and structural-core hotspots mapped across TP53 domains.
+
+Domain map · Structural summary
+
+6  ⚠️
+
+Where does the simple explanation fail?
+
+R249 used as a counterexample to “high conservation automatically means highest recurrence.”
+
+Interpretation · Limitations
+
+<a id="the-six-hotspots"></a>
+
+The six hotspots
+
+Hotspot
+
+Functional class
+
+Conservation
+
+PanCancer mutations
+
+Recurrence rank
+
+R175
+
+Structural core
+
+1.000
+
+167
+
+#3
+
+G245
+
+Structural core
+
+1.000
+
+91
+
+#6
+
+R248
+
+DNA contact
+
+1.000
+
+225
+
+#2
+
+R249
+
+Structural core
+
+1.000
+
+47
+
+#19
+
+R273
+
+DNA contact
+
+1.000
+
+268
+
+#1
+
+R282
+
+Structural core
+
+1.000
+
+91
+
+#5
+
+<sub>Sources: residue_conservation.csv and cbioportal_mutation_frequency_by_codon.csv.</sub>
+
+<a id="the-r249-exception"></a>
+
+The R249 exception
+
+R249 is perfectly conserved across the mammalian alignment—but only nineteenth by mutation count in the committed pan-cancer table.
+
+That is not an inconvenient outlier to hide. It is the result that prevents overclaiming.
+
+Evolutionary conservation measures long-term protein-level constraint. Cancer recurrence is also shaped by nucleotide context, mutational exposure, tumour type, tissue environment, clone-specific fitness and ascertainment in available cohorts. The two signals overlap, but they are not interchangeable.
+
+Conservation can support
+
+Conservation cannot determine alone
+
+Functional importance of a residue
+
+How often its codon is exposed to a specific mutational process
+
+Long-term intolerance to amino-acid change
+
+Tumour-type-specific selection
+
+Prioritisation for structural or functional testing
+
+Clinical risk, prognosis or treatment response
+
+<a id="visual-evidence"></a>
+
+Visual evidence
 
 <table>
   <tr>
-    <td align="center" width="25%">
-      <h2>56</h2>
-      <sub>curated mammalian<br>TP53 sequences</sub>
+    <td width="50%" align="center">
+      <a href="figures/main/Figure_2_Hotspot_vs_Control_Boxplot.png">
+        <img src="figures/main/Figure_2_Hotspot_vs_Control_Boxplot.png" alt="TP53 hotspot versus DNA-binding-domain control conservation" width="100%">
+      </a><br>
+      <sub><strong>Constraint.</strong> Hotspots versus domain-matched controls.</sub>
     </td>
-    <td align="center" width="25%">
-      <h2>6 / 6</h2>
-      <sub>canonical hotspots<br>fully conserved</sub>
+    <td width="50%" align="center">
+      <a href="figures/main/Figure_3_Phylogenetic_Sensitivity.png">
+        <img src="figures/main/Figure_3_Phylogenetic_Sensitivity.png" alt="Phylogenetic sensitivity analysis of TP53 hotspot conservation" width="100%">
+      </a><br>
+      <sub><strong>Robustness.</strong> Sensitivity to taxonomic composition.</sub>
     </td>
-    <td align="center" width="25%">
-      <h2>P = 0.0236</h2>
-      <sub>committed DBD-matched<br>permutation result</sub>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="figures/main/Figure_4_Mutation_Count_vs_Conservation.png">
+        <img src="figures/main/Figure_4_Mutation_Count_vs_Conservation.png" alt="TP53 cancer mutation count versus mammalian conservation" width="100%">
+      </a><br>
+      <sub><strong>Recurrence.</strong> Cancer mutation count versus conservation.</sub>
     </td>
-    <td align="center" width="25%">
-      <h2>ρ = 0.430</h2>
-      <sub>reported genome-wide<br>recurrence association</sub>
+    <td width="50%" align="center">
+      <a href="figures/main/Figure_5_TP53_Domain_Lollipop_Map.png">
+        <img src="figures/main/Figure_5_TP53_Domain_Lollipop_Map.png" alt="TP53 domain and recurrent mutation map" width="100%">
+      </a><br>
+      <sub><strong>Structure.</strong> Recurrent mutations across TP53 domains.</sub>
     </td>
   </tr>
 </table>
-
-<div align="center">
-
-Six perfect conservation scores. Six zero-entropy sites. One important exception to a simple story.
-
-</div>
-
-
 
 <details>
-<summary><strong>How should I read this figure?</strong></summary>
+<summary><strong>🌳 Open the mammalian TP53 phylogeny</strong></summary>
 
-The x-axis follows the 393-residue human TP53 reference. The profile shows how strongly each human-coordinate position is retained across the curated mammalian sequences. The canonical cancer hotspots sit inside the DNA-binding domain and reach the maximum observed conservation value in the committed analysis.
+<br>
 
-This demonstrates evolutionary constraint. It does not by itself establish why those codons mutate in tumours.
+<a href="figures/main/Figure_6_Mammalian_TP53_Phylogeny_CLEAN.png">
+  <img src="figures/main/Figure_6_Mammalian_TP53_Phylogeny_CLEAN.png" alt="Maximum-likelihood phylogeny of mammalian TP53 protein sequences" width="100%">
+</a>
+
+The maximum-likelihood tree provides evolutionary context for the 56-sequence alignment. Related species are not statistically independent, which is why the study also reports lineage-removal and order-aware sensitivity analyses.
 
 </details>
 
-<a id="hotspots"></a>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
-03 · 🎯 Meet the six
+<a id="methods-in-one-view"></a>
 
-<table>
-  <tr>
-    <th>Hotspot</th>
-    <th>Functional class</th>
-    <th>Mammalian conservation</th>
-    <th>PanCancer mutations</th>
-    <th>Recurrence rank</th>
-  </tr>
-  <tr>
-    <td><strong>R175</strong></td>
-    <td>Structural</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>167</td>
-    <td>#3</td>
-  </tr>
-  <tr>
-    <td><strong>G245</strong></td>
-    <td>Structural</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>91</td>
-    <td>#6</td>
-  </tr>
-  <tr>
-    <td><strong>R248</strong></td>
-    <td>DNA contact</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>225</td>
-    <td>#2</td>
-  </tr>
-  <tr>
-    <td><strong>R249</strong></td>
-    <td>Structural</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>47</td>
-    <td><strong>#19 ← the twist</strong></td>
-  </tr>
-  <tr>
-    <td><strong>R273</strong></td>
-    <td>DNA contact</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>268</td>
-    <td>#1</td>
-  </tr>
-  <tr>
-    <td><strong>R282</strong></td>
-    <td>Structural</td>
-    <td><strong>1.000</strong> · invariant</td>
-    <td>91</td>
-    <td>#5</td>
-  </tr>
-</table>
-
-<sub>Committed sources: residue_conservation.csv and cbioportal_mutation_frequency_by_codon.csv.</sub>
-
-🧨 The R249 plot twist
-
-flowchart LR
-    A["R249 across 56 mammals"] --> B["Conservation = 1.000"]
-    B --> C["Strong functional constraint"]
-    C --> D{"Does that guarantee top cancer recurrence?"}
-    D -->|No| E["PanCancer rank = 19"]
-
-R249 is the residue that stops this project from making a lazy conclusion. It is just as conserved as R273 or R248, yet far less recurrent in the committed pan-cancer table.
-
-That gap points to biology beyond conservation: mutational exposure, nucleotide context, tumour type, structural consequences and clonal selection can all shape recurrence. Conservation identifies importance; it does not dictate epidemiology.
-
-[!TIP]The strongest insight is not that conservation and cancer recurrence match. It is that they overlap strongly without being identical.
-
-<a id="workflow"></a>
-
-04 · 🔬 From sequence to biological argument
+Methods in one view
 
 flowchart TB
-    A["56 curated mammalian TP53 proteins"] --> B["MAFFT alignment"]
-    B --> C["Human-coordinate mapping<br>NP_001394193 · 393 aa"]
-    C --> D["Conservation · entropy · gaps"]
-    D --> E{"Challenge the signal"}
-    E --> F["Hotspots vs DBD controls"]
-    E --> G["Taxonomic sensitivity"]
-    E --> H["Cancer recurrence"]
-    F --> I["Constraint ≠ complete recurrence model"]
-    G --> I
-    H --> I
+    A["56 mammalian TP53 proteins"] --> B["Align + map to human coordinates"]
+    B --> C["Conservation + entropy"]
+    C --> D["DBD tests + phylogenetic sensitivity"]
+    D --> E["Cancer recurrence integration"]
+    E --> F["Evidence-bounded interpretation"]
 
 <details>
-<summary><strong>Open the full 10-step analytical path</strong></summary>
+<summary><strong>🔬 Expand the analytical design</strong></summary>
 
 Curate mammalian TP53 protein sequences with accession-level traceability.
 
-Align the sequences with MAFFT.
+Align sequences with MAFFT and anchor positions to the human TP53 reference.
 
-Anchor alignment coordinates to the 393-residue human TP53 reference.
+Calculate majority-residue conservation, human-residue conservation, Shannon entropy and gap statistics.
 
-Calculate majority-residue conservation, human-residue conservation, entropy and gap statistics.
+Verify the expected human residues at R175, G245, R248, R249, R273 and R282.
 
-Confirm the expected human amino acid at R175, G245, R248, R249, R273 and R282.
+Compare the canonical hotspots with non-hotspot residues from the same DNA-binding domain.
 
-Compare the six hotspots with non-hotspot residues from the same DNA-binding domain.
+Evaluate the hotspot mean with one-sided Mann–Whitney and matched permutation tests.
 
-Test the hotspot mean using one-sided Mann–Whitney and matched permutation approaches.
+Repeat the hotspot–control comparison across taxonomic sensitivity subsets.
 
-Integrate codon-level TCGA PanCancer recurrence exported through cBioPortal.
+Integrate TCGA PanCancer/cBioPortal mutation counts at human TP53 codons.
 
-Challenge taxonomic composition using lineage-removal and order-aware sensitivity analyses.
+Add domain, structural-class and maximum-likelihood phylogenetic context.
 
-Add phylogenetic and structural context, then interpret the result within explicit limits.
+Separate observed evidence from causal or clinical claims.
 
-</details>
-
-<a id="evidence"></a>
-
-05 · 📊 Choose an evidence lens
-
-<details open>
-<summary><strong>01 — Constraint: are hotspots exceptional inside the DNA-binding domain?</strong></summary>
-
-<br>
-
-
-
-The manuscript reports mean conservation of 1.000 for the six canonical hotspots versus 0.934 for non-hotspot DNA-binding-domain controls, with one-sided Mann–Whitney P = 0.0156. The committed matched permutation table reports empirical one-sided P = 0.02359.
-
-Why use domain-matched controls? Because comparing hotspots with the entire protein would be an easier test. The stricter question is whether hotspots remain unusual even inside TP53's already constrained functional core.
+Full documentation: methodology · statistics · provenance.
 
 </details>
 
-<details>
-<summary><strong>02 — Recurrence: does evolutionary conservation track human cancer frequency?</strong></summary>
+<a id="inspect-the-analysis"></a>
 
-<br>
+Inspect the analysis
 
-
-
-Across all 393 human-coordinate residues, the manuscript reports a positive Spearman association between mutation count and majority-residue conservation: ρ = 0.430; P = 4.49 × 10⁻¹⁹.
-
-The relationship is real at the dataset level, but it is not deterministic. The spread of points—and especially R249—shows why a correlation should not be mistaken for a complete mechanism.
-
-</details>
-
-<details>
-<summary><strong>03 — Robustness: is the result just a taxonomic sampling artefact?</strong></summary>
-
-<br>
-
-
-
-The analysis tests whether the hotspot-control contrast survives changes in species composition, including removal of overrepresented lineages and order-aware subsets. The reported direction of effect remains positive across the sensitivity analyses.
-
-This reduces—but does not eliminate—the problem of phylogenetic dependence. Fifty-six related species are not equivalent to 56 independent experiments.
-
-</details>
-
-<details>
-<summary><strong>04 — Structure: where do recurrent residues sit in TP53?</strong></summary>
-
-<br>
-
-
-
-The hotspot set combines DNA-contact residues with structural-core residues. This matters because identical conservation scores can reflect different functional roles and different routes to loss of TP53 activity.
-
-</details>
-
-06 · 🧠 Evidence, not overclaiming
-
-Evidence level
-
-What this repository supports
-
-Observed
-
-All six canonical sites have human-residue conservation 1.000, entropy 0, and no gaps in the committed 56-sequence table.
-
-Compared
-
-Hotspots show greater reported conservation than DNA-binding-domain non-hotspot controls.
-
-Associated
-
-Mutation recurrence and conservation have a positive reported residue-level correlation.
-
-Stress-tested
-
-The effect direction is retained across reported taxonomic sensitivity subsets.
-
-Not established
-
-Causal mechanism, clinical risk, prognosis, treatment response or mutation-specific pathogenicity.
-
-<a id="run"></a>
-
-07 · 💻 Run & inspect
-
-Clone
+Clone the repository
 
 git clone https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals.git
 cd TP53-Evolutionary-Conservation-Mammals
 
-Create a lightweight inspection environment
+Create an inspection environment
 
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirement.txt
 
-<details>
-<summary><strong>Show the six committed hotspot records</strong></summary>
+Open the evidence directly
 
-python - <<'PY'
-import pandas as pd
+Need
 
-df = pd.read_csv("data/processed/residue_conservation.csv")
-hotspots = df[df["is_canonical_hotspot"] == True]
+Start here
 
-columns = [
-    "human_position",
-    "human_residue",
-    "human_residue_conservation",
-    "shannon_entropy",
-    "gap_count",
-]
+Curated sequence set
 
-print(hotspots[columns].to_string(index=False))
-PY
+TP53_curated.fasta
 
-</details>
+Accession and species audit
 
-<details>
-<summary><strong>Re-run the standalone permutation module</strong></summary>
+TP53_sequence_accession_audit.csv
 
-python scripts/permutation_analysis.py \
-  --iterations 100000 \
-  --seed 42 \
-  --output permutation_check.csv
+Residue-level conservation
 
-The module runs independently, but its current metric selection does not reproduce every value in the committed permutation CSV. That discrepancy is documented under Scientific boundaries.
+residue_conservation.csv
 
-</details>
+Cancer recurrence data
 
-[!NOTE]This is currently an evidence-inspection workflow, not a clean one-command rebuild. The committed tables and figures are usable; the end-to-end script and tests still require schema reconciliation.
+cbioportal_mutation_frequency_by_codon.csv
 
-08 · 🗺️ Repository map
+Permutation result
 
-Area
+permutation_hotspot_statistics.csv
 
-What lives there
+Phylogenetic tree
 
-data/raw/
+TP53_mammals.treefile
 
-Source mutation exports and supporting inputs
-
-data/processed/
-
-Curated FASTA, accession audit and residue-level conservation
+Analysis scripts
 
 scripts/
 
-Alignment, conservation, permutation and downstream analysis modules
+Reviewer quick start
 
-results/
+docs/reviewer_quickstart.md
 
-Hotspot, statistical, mutation and phylogenetic outputs
-
-figures/main/
-
-Six publication figures in PNG and PDF
-
-figures/supplementary/
-
-Supplementary visual evidence
-
-docs/
-
-Methods, provenance, interpretation and version rules
-
-publication/
-
-Manuscript source and submitted research material
-
-🚪 Pick your entry point
-
-I want to…
-
-Open
-
-Understand the biology without heavy statistics
-
-result_interpretation_for_non_specialists.md
-
-Review the methods
-
-methodology.md
-
-Audit accessions and data origin
-
-provenance.md
-
-Inspect the statistical logic
-
-statistical_analysis.md
-
-Check limitations before citing
-
-interpretation_and_limitations.md
-
-Separate the 10-species and 56-sequence analyses
-
-analysis_versions.md
-
-<a id="boundaries"></a>
-
-09 · 🛡️ Scientific boundaries
+[!NOTE]The repository currently supports evidence inspection and modular analysis, not a verified one-command clean rebuild. The committed tables and figures can be inspected directly; the end-to-end script, tests and output schemas still require reconciliation before the workflow should be advertised as fully reproducible.
 
 <details>
-<summary><strong>What is solid, what is incomplete, and what must not be claimed</strong></summary>
+<summary><strong>🧾 Open the reproducibility audit</strong></summary>
 
-Supported
+requirement.txt exists, but some documentation still refers to a missing environment.yml.
 
-The six canonical hotspots are invariant in the committed 56-sequence conservation table.
+Alignment and conservation scripts do not yet agree on every path and output schema.
 
-The reported hotspot-control comparison supports unusually strong constraint within the DNA-binding domain.
+Current tests expect functions or columns that do not consistently match the committed implementation and tables.
 
-The reported recurrence correlation supports an association between evolutionary conservation and cancer mutation frequency.
+The standalone permutation module does not reproduce every committed statistic under its current metric selection.
 
-R249 demonstrates that conservation is not a complete predictor of recurrence.
+Exact software versions, checksums and a clean tagged release remain to be locked.
 
-Current reproducibility gaps
-
-The repository has requirement.txt, while some documentation refers to a missing environment.yml.
-
-Alignment and conservation scripts do not yet agree on all paths and output schemas.
-
-Current tests import functions or require columns that do not match the committed implementation and permutation table.
-
-The standalone permutation module does not exactly reproduce the committed null mean under its current metric selection.
-
-Exact software versions, checksums and a clean end-to-end release remain to be locked.
-
-Not supported
-
-Conservation does not prove that a mutation causes cancer.
-
-The study does not estimate personal cancer risk.
-
-The analysis is not a diagnostic, prognostic or treatment-selection tool.
-
-Species cannot be treated as statistically independent observations.
-
-The 56-sequence values cannot be silently substituted into the older 10-species preprint.
-
-For the full audit, read docs/reproducibility.md and docs/interpretation_and_limitations.md.
+Read the full reproducibility record.
 
 </details>
 
-<a id="versions"></a>
+<a id="evidence-boundaries"></a>
 
-10 · 🧾 Analysis versions
+Evidence boundaries
+
+✅ Supported by the study
+
+❌ Not established by the study
+
+Strong mammalian conservation at the six canonical hotspots
+
+That conservation causes a cancer mutation
+
+Greater reported hotspot conservation than DBD controls
+
+Personal cancer risk or diagnostic classification
+
+Positive association between recurrence and conservation
+
+Prognosis, treatment response or clinical utility
+
+Robust effect direction across reported taxonomic subsets
+
+Statistical independence of 56 related species
+
+R249 as evidence that recurrence needs additional explanation
+
+A complete codon-level evolutionary or mutational model
+
+<details>
+<summary><strong>⚠️ Read the limitations before reusing a result</strong></summary>
+
+The study uses protein-sequence conservation rather than a codon-aware evolutionary model. Mammalian orders are unevenly represented. TCGA PanCancer/cBioPortal counts reflect the available cohorts rather than universal mutation probabilities. Structural interpretation is class-based and should be extended with experimental structure, stability and DNA-contact evidence. None of the outputs are validated for clinical decision-making.
+
+Full discussion: docs/interpretation_and_limitations.md.
+
+</details>
+
+<a id="analysis-versions"></a>
+
+Analysis versions
+
+[!IMPORTANT]The linked Research Square preprint describes an earlier 10-species analysis. The current repository contains an expanded 56-sequence analysis. Their sample sizes and numerical results must not be mixed.
 
 Evidence snapshot
 
 Scope
 
-Use it for
+Correct use
 
 Research Square preprint v1
 
 Earlier 10-species analysis
 
-The frozen published record
+Cite as the frozen published record
 
 Current repository analysis
 
 Expanded 56-sequence MAFFT analysis
 
-Committed tables, figures and sensitivity results
+Use for committed repository tables, figures and sensitivity analyses
 
-Mixing these versions would be scientifically wrong. See docs/analysis_versions.md before reporting numerical results.
+See docs/analysis_versions.md for the reconciliation rule.
 
-11 · 🚀 What comes next
+<a id="publication"></a>
 
-Lock a versioned environment and all external tool versions.
-
-Reconcile alignment, conservation and downstream table schemas.
-
-Store permutation metric, seed and iteration count in every result.
-
-Repair tests and add continuous integration.
-
-Add input and output checksums.
-
-Tag the reconciled 56-sequence workflow as a release.
-
-Extend phylogeny-aware modelling beyond subset removal.
-
-Test the evolutionary hypotheses with structural or experimental evidence.
-
-<a id="citation"></a>
-
-12 · 📚 Cite this work
+Publication
 
 Rawat, R. R., Nadar, S., & Uppal, G. K. (2026).Evolutionary Conservation and Functional Constraint of TP53 Mutation Hotspots Across Mammalian Species.Research Square. https://doi.org/10.21203/rs.3.rs-9299199/v1
 
-Repository citation metadata is provided in CITATION.cff. Before release, replace or remove the placeholder ORCID currently present in that file.
 
-13 · 👥 Research team
 
-Researcher
+<details>
+<summary><strong>📖 Read the study abstract</strong></summary>
 
-Contribution
+TP53 is the most frequently mutated tumour-suppressor gene in human cancer, yet the evolutionary constraints underlying recurrent TP53 mutation hotspots remain incompletely characterised. This study integrates comparative genomics, phylogenetic analysis and cancer mutation data to test whether recurrent human TP53 hotspot residues preferentially occur at evolutionarily constrained mammalian positions. A curated alignment of 56 mammalian TP53 protein sequences was mapped to the 393-residue human reference. All six canonical hotspots were completely conserved and were more conserved than non-hotspot residues within the DNA-binding domain. The pattern remained positive across phylogenetic sensitivity analyses. Mutation recurrence showed a positive association with evolutionary conservation across TP53, while the lower recurrence rank of fully conserved R249 indicated that conservation alone cannot explain the cancer-frequency landscape.
 
-Ritika Rajendra Rawat
+</details>
 
-Study design, sequence curation, computational workflow, analysis, phylogenetics, cancer-data integration, visualisation, interpretation and manuscript drafting
+<a id="cite-this-work"></a>
 
-Sermarani Nadar
+Cite this work
 
-Co-author of the associated research
+@article{rawat2026tp53,
+  author  = {Rawat, Ritika Rajendra and Nadar, Sermarani and Uppal, Gursimran Kaur},
+  title   = {Evolutionary Conservation and Functional Constraint of TP53 Mutation Hotspots Across Mammalian Species},
+  year    = {2026},
+  journal = {Research Square},
+  doi     = {10.21203/rs.3.rs-9299199/v1},
+  url     = {https://doi.org/10.21203/rs.3.rs-9299199/v1}
+}
 
-Gursimran Kaur Uppal
+GitHub also exposes Cite this repository in the sidebar through CITATION.cff. The placeholder ORCID in that file should be replaced or removed before a tagged release.
 
-Co-author of the associated research
+<a id="research-team"></a>
+
+Research team
+
+Ritika Rajendra Rawat — conception, computational workflow, sequence curation, analysis, phylogenetics, cancer-data integration, visualisation, interpretation and manuscript drafting.
+
+Sermarani Nadar — scientific discussion, interpretation, critical review and manuscript approval.
+
+Gursimran Kaur Uppal — scientific discussion, interpretation, critical review and manuscript approval.
 
 <a id="contact"></a>
 
-14 · 🤝 Contact & collaboration
+Contact
 
-Interested in comparative genomics, evolutionary oncology, TP53 biology, reproducible bioinformatics or research collaboration? Use the route that matches your purpose:
-
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Research%20Collaboration"><strong>✉️ Email</strong></a><br>
-      <sub>Research and collaboration</sub>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://in.linkedin.com/in/ritika-rawat-551107219"><strong>💼 LinkedIn</strong></a><br>
-      <sub>Professional connection</sub>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><strong>🔬 ResearchGate</strong></a><br>
-      <sub>Research profile</sub>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/Rita1791/TP53-Evolutionary-Conservation-Mammals/issues/new"><strong>💬 GitHub issue</strong></a><br>
-      <sub>Technical questions</sub>
-    </td>
-  </tr>
-</table>
+For comparative genomics, evolutionary oncology, TP53 biology, reproducible bioinformatics or research collaboration:
 
 <div align="center">
 
-<a href="mailto:ritikarvl2627@gmail.com?subject=TP53%20Evolutionary%20Conservation%20Research"><img src="https://img.shields.io/badge/EMAIL-Ritika_Rawat-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritika Rawat"></a><a href="https://in.linkedin.com/in/ritika-rawat-551107219"><img src="https://img.shields.io/badge/LINKEDIN-Ritika_Rawat-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Ritika Rawat on LinkedIn"></a><a href="https://www.researchgate.net/profile/Ritika-Rawat-10"><img src="https://img.shields.io/badge/RESEARCHGATE-Follow_Research-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="Follow research on ResearchGate"></a>
+
 
 </div>
 
+License
+
+Code and repository material are released under the MIT License. Third-party biological data and external resources retain their original terms of use.
+
 <div align="center">
 
-The six hotspots were not the end of the analysis.
+Evolutionary conservation is the evidence trail.
 
-They were the start of a better question.
+R249 is the reminder not to oversimplify it.
 
-Why do equally conserved residues recur so differently in cancer?
+↑ Back to top · Read the preprint · Open the figures · Contact the author
 
-⬆ Back to top · 📖 Read the preprint · ⭐ View the repository
-
-<sub>MIT licensed · Computational research only · Not validated for clinical use</sub>
+<sub>Comparative-genomics research · Not validated for clinical use</sub>
 
 </div>
