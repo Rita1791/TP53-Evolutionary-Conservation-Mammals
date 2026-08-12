@@ -19,7 +19,7 @@
 
 <br>
 
-[![Email](https://img.shields.io/badge/📧_EMAIL-Connect_with_Ritika-EA4335?style=for-the-badge)](mailto:ritikarvl2627@gmail.com?subject=TP53%20Research%20Collaboration)
+[![Email](https://img.shields.io/badge/📧_EMAIL-Connect_with_Ritika-EA4335?style=for-the-badge)](ritika.rawat27@outlook.comsubject=TP53%20Research%20Collaboration)
 [![LinkedIn](https://img.shields.io/badge/💼_LINKEDIN-Ritika_Rawat-0A66C2?style=for-the-badge)](https://in.linkedin.com/in/ritika-rawat-551107219)
 [![GitHub](https://img.shields.io/badge/💻_GITHUB-Rita1791-181717?style=for-the-badge)](https://github.com/Rita1791)
 [![ResearchGate](https://img.shields.io/badge/🔬_RESEARCHGATE-Follow_Research-00CCBB?style=for-the-badge)](https://www.researchgate.net/profile/Ritika-Rawat-10)
